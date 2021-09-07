@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The Hill - 05 - The forum
 
 > PHP/MySQL Bulletin Board Project
@@ -96,3 +97,6 @@ Communication is the key.
 The project needs to be _published_ on [Heroku](www.heroku.com) (you have free credits to use on Heroku with your **GitHub Student Pack**).
 
 At the deadline of **20/09/2021 at 08h59**, we need to receive an **email**, to `nick@becode.org` **and** `tanya@becode.org`, with the _URL of your repository_ and the _URL of your project_ on Heroku.
+=======
+# Hello and Welcome !
+>>>>>>> development

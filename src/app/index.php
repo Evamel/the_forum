@@ -12,7 +12,6 @@ require_once 'Model/Article.php';
 require_once 'Controller/HomepageController.php';
 require_once 'Controller/ArticleController.php';
 
-
 require_once 'config/config.php';
 
 // Get the current page to load
