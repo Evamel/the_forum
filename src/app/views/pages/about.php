@@ -1,5 +1,5 @@
  <?php
-    //members// nous grands créateurs du site
-    echo 'About us'
-    ?>
-    
+
+   echo 'About Page';
+
+   //members// nous grands créateurs du site
