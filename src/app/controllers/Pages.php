@@ -6,17 +6,20 @@ class Pages extends Controller {
     }
 
     public function index() {
+      
+        $this->view('pages/index');
+    }
+
+    public function about() {
+        $this->view('pages/about');
+    }
+    public function users(){
         $users = $this->userModel->getUsers();
         $data= [
             'title' => 'Home page',
             'users' => $users
         ];
-       $this->view('pages/index', $data);
-      
-    }
-
-    public function about() {
-        $this->view('pages/about');
+       $this->view('pages/users', $data);
     }
 
     public function board() {
@@ -27,4 +30,5 @@ class Pages extends Controller {
         ];
         $this->view('pages/board', $data);
     }
+
 }
