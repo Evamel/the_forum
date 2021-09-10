@@ -10,3 +10,4 @@ foreach ($data['users'] as $user) {
     echo "<li>" . $user->user_signature . "</li>";
     echo "<li>" . ($user->user_level == 1 ? 'Admin' : 'Member') . "</li></ul>";
 }
+// 1 = Member. 2 = Moderator more permissions than member. 3 = Admin SUDO.
