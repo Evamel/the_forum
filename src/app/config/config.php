@@ -12,7 +12,7 @@ define("DB_CHARSET", "utf8");
 define ('APPROOT',dirname(dirname(__FILE__)));
 
 //URLROOT (Dynamic links)
-define('URLROOT', 'localhost');
+define('URLROOT', 'http://localhost');
 
 //Sitename
 define('SITENAME', 'The Forum');

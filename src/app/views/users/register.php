@@ -11,7 +11,7 @@ require APPROOT . '/views/includes/navigation.php';
 <div class="container-login">
    <div class="wrapper-login">
         <h2>Register</h2>
-           <form action="<?php echo URLROOT; ?>/users/register" method="POST">
+           <form action="<?php  echo URLROOT; ?>/users/register" method="POST">
                <input type="text" placeholder="Username *" name="username">
                <span class="invalidFeedback">
                    <?php echo $data['emailError']; ?>

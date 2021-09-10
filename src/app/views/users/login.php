@@ -8,6 +8,9 @@ require APPROOT . '/views/includes/head.php';
 require APPROOT . '/views/includes/navigation.php';
 ?>
 
+<?php 
+var_dump($_SESSION);
+?>
 <div class="container-login">
    <div class="wrapper-login">
         <h2>Sign in</h2>
@@ -26,7 +29,7 @@ require APPROOT . '/views/includes/navigation.php';
                 Submit
                </button>
                <p class="options">
-                   Not registered yet? <a href="<?php //echo URLROOT; ?>/users/register">Create an account</a>
+                   Not registered yet? <a href="<?php echo URLROOT; ?>/users/register">Create an account</a>
                </p>
            </form>
     </div>
