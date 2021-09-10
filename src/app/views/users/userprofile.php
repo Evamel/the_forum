@@ -32,7 +32,11 @@ echo 'User Profile page';
     echo "<li>" . date_format($date,'d/m/y'). "</li>";
     echo "<li>" . $_SESSION['signature']. "</li>";
     echo "<li>" . ($_SESSION['level'] == 2 ? 'Admin' : 'Member') . "</li></ul>";
-
+    ?>
+    <p class="edit">
+    <a href="<?php echo URLROOT; ?>/users/editprofile">Edit your account</a>
+</p>
+<?php
 // 1 = Member. 2 = Moderator more permissions than member. 3 = Admin SUDO.
 ?>
 

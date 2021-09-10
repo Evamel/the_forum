@@ -13,6 +13,15 @@ class Users extends Controller {
         $this->view('users/userprofile', $data);
     }
 
+    public function editProfile () {
+        $editProfile = $this->userModel->getUsers();
+        $data = [
+            'title' => 'User Profile Editor',
+            'users' => $editProfile
+        ];
+        $this->view('users/editprofile', $data);
+    }
+
     public function register() {
         $data = [
          'username' => '',
