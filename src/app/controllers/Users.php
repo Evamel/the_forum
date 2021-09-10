@@ -5,20 +5,65 @@ class Users extends Controller {
     }
 
     public function userProfile () {
-        $userProfile = $this->userModel->getUsers();
-        $data = [
-            'title' => 'User Profile',
-            'users' => $userProfile
-        ];
-        $this->view('users/userprofile', $data);
+       
+        $this->view('users/userprofile');
     }
 
     public function editProfile () {
-        $editProfile = $this->userModel->getUsers();
         $data = [
-            'title' => 'User Profile Editor',
-            'users' => $editProfile
-        ];
+            'username' => '',
+            'email' => '',
+            'signature' => '',
+            'usernameError' => '',
+            'emailError' => '',
+            'signatureError' => '',
+                  ];
+
+       if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $data = [
+                'username' => trim($_POST['username']),
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['signature']),
+                'usernameError' => '',
+                'emailError' => '',
+                'signatureError' => '',
+                      ]; 
+        $nameValidation = "/^[a-zA-Z0-9]*$/";
+        $signatureValidation = "/^[a-zA-Z0-9]*$/";
+         //validate username
+         if (empty($data['username'])) {
+            $data['usernameError'] = 'Please enter your name =^w^=';
+          } elseif (!preg_match($nameValidation, $data['username'])){
+            $data['usernameError'] = 'A name with only letters and numbers =^o^=';
+          }
+        //validate email
+        if (empty($data['email'])) {
+            $data['emailError'] = 'Please enter your email =^w^=';
+          } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+            $data['emailError'] = 'An email in correct format =^o^=';  
+          } else {
+              //check existence of email
+              if ($this->userModel->findUserByEmail($data['email'])) { 
+                $data['emailError'] = 'That email already exists =^v^=';  
+              }
+          }
+
+          //validate username
+         if (!preg_match($signatureValidation, $data['signature'])){
+            $data['signatureError'] = 'A signature can only contain letters and numbers =^o^=';
+          }
+
+           //confirm errors are empty
+           if(empty($data['usernameError']) && empty($data['emailError']) && empty($data['signatureError'])){
+            if ($this->userModel->edit($data)){
+                //redirect to login page
+                header('location: ' . URLROOT . '/users/userprofile');
+            } else {
+                die('Something went wrong =^o^=');
+            }
+           }                          
+        }
         $this->view('users/editprofile', $data);
     }
 

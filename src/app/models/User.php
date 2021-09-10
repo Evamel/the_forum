@@ -56,7 +56,18 @@ class User
      }
     } 
 
-    
+    public function edit ($data){
+        $this->db->query('INSERT INTO users (user_name, user_email, user_signature) VALUES(:username, :email, :signature)');
+        $this->db->bind(':username',$data['username']);
+        $this->db->bind(':email',$data['email']);
+        $this->db->bind(':password',$data['signature']);
+        //execute function
+        if ($this->db->execute()) {
+           return true;
+        }else {
+            return false;
+        }
+    }
 
    
 }

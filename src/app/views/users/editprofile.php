@@ -15,20 +15,20 @@ require APPROOT . '/views/includes/navigation.php';
         <h2>Your Profile</h2>
            <form action="<?php  echo URLROOT; ?>/users/editprofile" method="POST">
             Your kitty name:
-               <input type="text" placeholder="<?php echo $_SESSION['username'] ?>" name="username">
+               <input type="text" value="<?php echo $_SESSION['username'] ?>" name="username">
                <span class="invalidFeedback">
                    <?php echo $data['usernameError']; ?>
                </span>
                <br>
             Your email :
-               <input type="email" placeholder="<?php echo $_SESSION['email'] ?>" name="email">
+               <input type="email" value="<?php echo $_SESSION['email'] ?>" name="email">
                <span class="invalidFeedback">
                    <?php echo $data['emailError']; ?>
                </span>
                <br>
             Your signature :
                <br>
-               <textarea rows="2" cols="80" placeholder="<?php echo $_SESSION['signature'] ?>" name="signature"></textarea>
+               <textarea rows="2" cols="80" value="<?php echo $_SESSION['signature'] ?>" name="signature"></textarea>
                <span class="invalidFeedback">
                    <?php echo $data['signatureError']; ?>
                </span>
