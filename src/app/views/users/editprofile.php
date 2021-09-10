@@ -28,7 +28,7 @@ require APPROOT . '/views/includes/navigation.php';
                <br>
             Your signature :
                <br>
-               <textarea rows="2" cols="80" value="<?php echo $_SESSION['signature'] ?>" name="signature"></textarea>
+               <input type="text" value="<?php echo $_SESSION['signature'] ?>" name="signature">
                <span class="invalidFeedback">
                    <?php echo $data['signatureError']; ?>
                </span>

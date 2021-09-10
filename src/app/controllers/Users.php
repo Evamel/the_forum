@@ -58,7 +58,7 @@ class Users extends Controller {
            if(empty($data['usernameError']) && empty($data['emailError']) && empty($data['signatureError'])){
             if ($this->userModel->edit($data)){
                 //redirect to login page
-                header('location: ' . URLROOT . '/users/userprofile');
+                header('location: ' . URLROOT . '/pages/index');
             } else {
                 die('Something went wrong =^o^=');
             }
