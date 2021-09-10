@@ -4,6 +4,15 @@ class Users extends Controller {
         $this->userModel = $this->model('User');
     }
 
+    public function userProfile () {
+        $userProfile = $this->userModel->getUsers();
+        $data = [
+            'title' => 'User Profile',
+            'users' => $userProfile
+        ];
+        $this->view('users/userprofile', $data);
+    }
+
     public function register() {
         $data = [
          'username' => '',
@@ -109,7 +118,7 @@ class Users extends Controller {
                 $data['passwordError'] = 'Please enter your password =^w^=';
             }
 
-            if(empty($data['username']) && empty($data['password'])){
+            if(empty($data['usernameError']) && empty($data['passwordError'])){
               $loggedInUser = $this->userModel->login($data['username'],$data['password']);
               if($loggedInUser){
                $this->createUserSession($loggedInUser);
@@ -135,10 +144,13 @@ class Users extends Controller {
 
     public function createUserSession($user){
     
-     $_SESSION['user_id'] = $user->id ;
-     $_SESSION['username'] = $user->username ;
-     $_SESSION['email'] = $user->email;
-     header('location:' . URLROOT . '/pages/index');
+     $_SESSION['user_id'] = $user->user_id;
+     $_SESSION['username'] = $user->user_name ;
+     $_SESSION['email'] = $user->user_email;
+     $_SESSION['date'] = $user->user_date;
+     $_SESSION['signature'] = $user->user_signature;
+     $_SESSION['level'] = $user->user_level;
+     header('location:' . URLROOT . '/users/userprofile');
 
     }
 
@@ -147,6 +159,9 @@ class Users extends Controller {
     unset($_SESSION['user_id']);
     unset($_SESSION['username']);
     unset($_SESSION['email']);
+    unset($_SESSION['date']); 
+    unset($_SESSION['signature']); 
+    unset($_SESSION['level']); 
     header('location:' . URLROOT . '/users/login');
 }   
 }

@@ -9,7 +9,7 @@ require APPROOT . '/views/includes/navigation.php';
 ?>
 
 <?php 
-var_dump($_SESSION);
+var_dump($_SESSION);  
 ?>
 <div class="container-login">
    <div class="wrapper-login">

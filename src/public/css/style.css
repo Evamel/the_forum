@@ -9,56 +9,59 @@ body {
   color: #ffffff;
 }
 
-#header{
-    position: relative;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: fit-content;
-        background-color: rgb(61, 6, 78);
-        color: white;
-        text-align: center;
+#header {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(61, 6, 78);
+  color: white;
+  text-align: center;
 }
 h1 {
-    text-align: center;
-    
+  text-align: center;
+}
+
+h3 {
+  text-align: right;
 }
 
 .top-nav {
-    display: block;
-  }
-  .top-nav ul {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    right: 6%;
-    top: 2%;
-  }
-  .top-nav ul li {
-    display: inline-block;
-    margin-left: 28px;
-  }
-  .top-nav ul a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  .top-nav ul a:hover {
-      color: purple;
-      transition: 0.15s ease-in;
-    }
+  display: block;
+}
+.top-nav ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 6%;
+  top: 2%;
+}
+.top-nav ul li {
+  display: inline-block;
+  margin-left: 28px;
+}
+.top-nav ul a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+.top-nav ul a:hover {
+  color: purple;
+  transition: 0.15s ease-in;
+}
 
 #footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: fit-content;
-        padding: 1%;
-        background-color: rgb(61, 6, 78);
-        color: white;
-        text-align: center;
-      }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 1%;
+  background-color: rgb(61, 6, 78);
+  color: white;
+  text-align: center;
+}
 
 .bottom-nav {
   display: block;
@@ -78,17 +81,17 @@ h1 {
 .bottom-nav ul a {
   color: #ffffff;
   text-decoration: none;
-
 }
 .bottom-nav ul a:hover {
-    color: purple;
-    transition: 0.15s ease-in;
-  }
-#section-landing {
-    background: url('../img/cover.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
+  color: purple;
+  transition: 0.15s ease-in;
 }
+#section-landing {
+  background: url("../img/cover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
