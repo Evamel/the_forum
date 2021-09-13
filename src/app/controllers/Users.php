@@ -11,6 +11,7 @@ class Users extends Controller {
 
     public function editProfile () {
         $data = [
+            'id' => '',
             'username' => '',
             'email' => '',
             'signature' => '',
@@ -22,15 +23,16 @@ class Users extends Controller {
        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             $data = [
+                'id' => $_SESSION['user_id'],
                 'username' => trim($_POST['username']),
                 'email' => trim($_POST['email']),
-                'password' => trim($_POST['signature']),
+                'signature' => trim($_POST['signature']),
                 'usernameError' => '',
                 'emailError' => '',
                 'signatureError' => '',
                       ]; 
         $nameValidation = "/^[a-zA-Z0-9]*$/";
-        $signatureValidation = "/^[a-zA-Z0-9]*$/";
+        $signatureValidation = "/^[-a-zA-Z0-9 .]+$/";
          //validate username
          if (empty($data['username'])) {
             $data['usernameError'] = 'Please enter your name =^w^=';

@@ -57,10 +57,11 @@ class User
     } 
 
     public function edit ($data){
-        $this->db->query('INSERT INTO users (user_name, user_email, user_signature) VALUES(:username, :email, :signature)');
+        $this->db->query('UPDATE users SET user_name =:username, user_email =:email, user_signature =:signature WHERE user_id=:id');
+        $this->db->bind(':id',$data['id']);
         $this->db->bind(':username',$data['username']);
         $this->db->bind(':email',$data['email']);
-        $this->db->bind(':password',$data['signature']);
+        $this->db->bind(':signature',$data['signature']);
         //execute function
         if ($this->db->execute()) {
            return true;
