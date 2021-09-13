@@ -40,6 +40,9 @@ require APPROOT . '/views/includes/right.php';
       <a class="btn orange" href="<?php echo URLROOT . "/messages/update/" . $message->message_id ?>">
          Update
      </a>
+     <form action="<?php echo URLROOT . "/messages/delete/" . $message->message_id?>" method="POST">
+    <input type="submit" name="delete" value="Delete" class ="btn red">
+    </form>
       <?php endif; ?>
     <?php endforeach;?>
 

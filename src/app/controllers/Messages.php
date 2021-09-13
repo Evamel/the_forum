@@ -101,10 +101,33 @@ class Messages extends Controller{
 
 
 
-    public function delete(){
+    public function delete($id){
+        $message =$this->messageModel->findMessageById($id);
 
+        if(!isLoggedIn()){
+             header("Location: " . URLROOT . "/messages");
+        } elseif($message->user_id !=$_SESSION['user_id']) {
+         header("Location: " . URLROOT . "/messages");
+        }
+ 
+     
+       $data =[
+        'message' => $message,
+        'content' =>'',
+        'contentError' => '',
+ 
+      ];
+
+      if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
+        
+        if($this->messageModel->deleteMessage($id)){
+            header("Location:" . URLROOT . "/messages");
+        } else {
+           die('Something went wrong');
+        }
     }
 
-
+    }
 
 }

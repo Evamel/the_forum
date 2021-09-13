@@ -36,13 +36,21 @@ class Message {
         $this->db->query('UPDATE messages SET message_content=:content WHERE message_id=:id');
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':content', $data['content']);
-        if ($this->db->execute()){
+        if ($this->db->execute()) {
             return true;
-        }else{
+        } else {
              return false;
         }
       }
-  
-  
-    
+
+    public function deleteMessage($id) {
+      $this->db->query('DELETE FROM messages WHERE message_id= :id');
+      $this->db->bind(':id', $id);
+      
+      if ($this->db->execute()) {
+        return true;
+    } else {
+         return false;
+    }
+    }     
 }
