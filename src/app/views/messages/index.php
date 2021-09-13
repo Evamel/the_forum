@@ -24,7 +24,7 @@ require APPROOT . '/views/includes/right.php';
     
 
      <div class="container user">
-     <?php echo $message->message_by;?>
+     <?php echo $message->user_id;?>
 
      </div>
 
@@ -36,7 +36,7 @@ require APPROOT . '/views/includes/right.php';
          <?php echo 'posted on: ' . date('F j h:m', strtotime($message->message_date)) ?>
      </h5>
     </div>
-    <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $message->message_by): ?>
+    <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $message->user_id): ?>
       <a class="btn orange" href="<?php echo URLROOT . "/messages/update/" . $message->message_id ?>">
          Update
      </a>

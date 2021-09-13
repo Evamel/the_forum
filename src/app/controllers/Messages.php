@@ -55,25 +55,56 @@ class Messages extends Controller{
 
 
 
-    public function update($message_id){
-        $message =$this->messageModel->findMessageById($message_id);
+    public function update($id) {
+        
+        $message =$this->messageModel->findMessageById($id);
+
        if(!isLoggedIn()){
             header("Location: " . URLROOT . "/messages");
-       } elseif($message->message_by !=$_SESSION['user_id']) {
-
+       } elseif($message->user_id !=$_SESSION['user_id']) {
+        header("Location: " . URLROOT . "/messages");
        }
 
-     
-
+    
       $data =[
         'message' => $message,
+        'content' =>'',
+        'contentError' => '',
 
      ];
 
-     $this->view('messages/update',$data);
+     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
+        $data =[
+          'id' => $id,
+          'message' => $message,
+          'user_id' =>$_SESSION['user_id'],
+          'content' =>trim($_POST['content']),
+          'contentError' => '',
+       ];
+     if(empty($data['content'])){
+         $data['contentError'] = 'your post is empty';
+     }
+     if(empty($data['contentError'])){
+      if($this->messageModel->updateMessage($data)){
+          header("Location:" . URLROOT . "/messages");
+      } else {
+          die("Something mew wrong, try again");
+      }
+  }else {
+      $this->view('messages/update', $data);
+  }
     }
+    $this->view('messages/update', $data);
+  }
+     
+
+
 
     public function delete(){
 
     }
+
+
+
 }

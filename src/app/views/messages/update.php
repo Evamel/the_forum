@@ -21,7 +21,7 @@ require APPROOT . '/views/includes/right.php';
   
 <div class="container-center">
     <h2> Update your answer </h2>
-    <form action="<?php echo URLROOT; ?>/messages/update/<?php $data['message']->message_id?>" method="POST">
+    <form action="<?php echo URLROOT; ?>/messages/update/<?php echo $data['message']->message_id?>" method="POST">
     <div class='form-item'>
 
         <textarea name="content" placeholder="Your answer" >
