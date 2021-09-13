@@ -27,6 +27,16 @@ h3 {
   text-align: right;
 }
 
+h5 {
+  color: white;
+  background-color: rgb(204, 47, 170);
+}
+
+p {
+  color: indigo;
+  background-color: lavender;
+}
+
 .top-nav {
   display: block;
 }
@@ -105,4 +115,8 @@ a.btn {
 
 a.btn:hover {
   color: blueviolet;
+}
+
+#container-user {
+  background-color: fuchsia;
 }
