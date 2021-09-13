@@ -11,20 +11,23 @@ class Topic {
        $results = $this->db->resultSet();
      //query to display user name and signature
        return $results;
+       
     }
 
     public function messagesByTopic(){
-        $this->db->query('SELECT COUNT(*) AS total,topic_subject FROM messages LEFT JOIN topics ON messages.topic_id = topics.topic_id GROUP BY topic_subject ORDER BY total ASC');
+        $this->db->query('SELECT COUNT(message_id) AS total,topic_subject,topic_date,user_name,topics.topic_id,topics.board_id,users.user_id FROM messages RIGHT OUTER JOIN topics ON messages.topic_id = topics.topic_id INNER JOIN users ON topics.user_id = users.user_id GROUP BY topic_subject ORDER BY total ASC;');
         $results = $this->db->resultSet();
       //query to display user name and signature
         return $results;
+       
      }
 
 
 
     public function createTopic($data){
-      $this->db->query('INSERT INTO topics (user_id, topic_subject) VALUES (:user_id, :subject)');
+      $this->db->query('INSERT INTO topics (user_id, topic_subject, board_id) VALUES (:user_id, :subject, :board_id)');
       $this->db->bind(':user_id',$data['user_id']);
+      $this->db->bind(':board_id',$data['board']);
       $this->db->bind(':subject',$data['subject']);
       if ($this->db->execute()){
           return true;

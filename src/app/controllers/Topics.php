@@ -8,11 +8,13 @@ class Topics extends Controller{
     public function index() {
         $topics = $this->topicModel->findAllTopics();
         $messages = $this->topicModel->messagesByTopic();
+   
 
         $data = [
           'topics' => $topics,
           'messages' => $messages
         ];
+   
 
         $this->view('topics/index', $data);
     }
@@ -27,6 +29,7 @@ class Topics extends Controller{
       $data =[
          'user_id' =>$_SESSION['user_id'],
          'subject' =>'',
+         'board' =>'',
          'subjectError' => '',
       ];
 
@@ -35,6 +38,7 @@ class Topics extends Controller{
           $data =[
             'user_id' =>$_SESSION['user_id'],
             'subject' =>trim($_POST['subject']),
+            'board' => 3,
             'subjectError' => '',
          ];
        if(empty($data['subject'])){
