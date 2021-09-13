@@ -233,4 +233,12 @@ class Users extends Controller
         unset($_SESSION['level']);
         header('location:' . URLROOT . '/users/login');
     }
+
+    public function access()
+    {
+        // Permissions :
+        // 1 Member : Create topic, edit or delete it. Topic of an other user, only read and answer.
+        // 2 Moderator : Same as member but can also delete topic or comments.
+        // 3 Administrator : US. Same as Moderator, and can change the level of an user. Can access all profiles and DB.
+    }
 }
