@@ -56,13 +56,14 @@ class Messages extends Controller{
 
 
     public function update($message_id){
+        $message =$this->messageModel->findMessageById($message_id);
        if(!isLoggedIn()){
             header("Location: " . URLROOT . "/messages");
        } elseif($message->message_by !=$_SESSION['user_id']) {
 
        }
 
-      $message =$this->messageModel->findMessageById($message_id);
+     
 
       $data =[
         'message' => $message,
