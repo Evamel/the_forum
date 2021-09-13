@@ -31,7 +31,9 @@ class Users extends Controller {
                 'emailError' => '',
                 'signatureError' => '',
                       ]; 
+        //regex avec uniquement les chiffres et les lettres              
         $nameValidation = "/^[a-zA-Z0-9]*$/";
+        //regex avec les - les espaces et les . 
         $signatureValidation = "/^[-a-zA-Z0-9 .]+$/";
          //validate username
          if (empty($data['username'])) {
