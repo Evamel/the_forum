@@ -16,10 +16,11 @@ class User
 
     public function register($data)
     {
-        $this->db->query('INSERT INTO users (user_name, user_email, user_pass) VALUES(:username, :email, :password)');
+        $this->db->query('INSERT INTO users (user_name, user_email, user_pass, user_avatar) VALUES(:username, :email, :password, :avatar)');
         $this->db->bind(':username', $data['username']);
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
+        $this->db->bind(':avatar', $data['avatar']);
         //execute function
         if ($this->db->execute()) {
             return true;
@@ -59,10 +60,12 @@ class User
 
     public function edit($data)
     {
-        $this->db->query('INSERT INTO users (user_name, user_email, user_signature) VALUES(:username, :email, :signature)');
+        $this->db->query('UPDATE users SET user_avatar =:avatar, user_name =:username, user_email =:email, user_signature =:signature WHERE user_id=:id');
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':avatar', $data['avatar']);
         $this->db->bind(':username', $data['username']);
         $this->db->bind(':email', $data['email']);
-        $this->db->bind(':password', $data['signature']);
+        $this->db->bind(':signature', $data['signature']);
         //execute function
         if ($this->db->execute()) {
             return true;

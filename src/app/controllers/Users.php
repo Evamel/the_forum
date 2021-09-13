@@ -29,6 +29,7 @@ class Users extends Controller
     public function editProfile()
     {
         $data = [
+            'id' => '',
             'username' => '',
             'email' => '',
             'signature' => '',
@@ -40,15 +41,18 @@ class Users extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             $data = [
+                'id' => $_SESSION['user_id'],
                 'username' => trim($_POST['username']),
                 'email' => trim($_POST['email']),
-                'password' => trim($_POST['signature']),
+                'signature' => trim($_POST['signature']),
                 'usernameError' => '',
                 'emailError' => '',
                 'signatureError' => '',
             ];
+            //regex avec uniquement les chiffres et les lettres              
             $nameValidation = "/^[a-zA-Z0-9]*$/";
-            $signatureValidation = "/^[a-zA-Z0-9]*$/";
+            //regex avec les - les espaces et les . 
+            $signatureValidation = "/^[-a-zA-Z0-9 .]+$/";
             //validate username
             if (empty($data['username'])) {
                 $data['usernameError'] = 'Please enter your name =^w^=';
@@ -88,6 +92,7 @@ class Users extends Controller
     public function register()
     {
         $data = [
+            'avatar' => '',
             'username' => '',
             'email' => '',
             'password' => '',
@@ -100,6 +105,7 @@ class Users extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             $data = [
+                'avatar' => "https://www.gravatar.com/avatar/" . md5(trim($_POST['email'])) . "?s=64&d=mp",
                 'username' => trim($_POST['username']),
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
@@ -112,6 +118,7 @@ class Users extends Controller
 
             $nameValidation = "/^[a-zA-Z0-9]*$/";
             $passwordValidation = "/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
+
             //validate username
             if (empty($data['username'])) {
                 $data['usernameError'] = 'Please enter your name =^w^=';
@@ -213,13 +220,13 @@ class Users extends Controller
 
     public function createUserSession($user)
     {
-
         $_SESSION['user_id'] = $user->user_id;
         $_SESSION['username'] = $user->user_name;
         $_SESSION['email'] = $user->user_email;
         $_SESSION['date'] = $user->user_date;
         $_SESSION['signature'] = $user->user_signature;
         $_SESSION['level'] = $user->user_level;
+        $_SESSION['avatar'] = $user->user_avatar;
         header('location:' . URLROOT . '/users/userprofile');
     }
 
