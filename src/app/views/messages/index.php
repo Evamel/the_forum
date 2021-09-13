@@ -23,9 +23,10 @@ require APPROOT . '/views/includes/right.php';
     <div class="container-item">
     
 
-     <div class="container user">
-     <?php echo $message->user_id;?>
-
+     <div class="container-user">
+     <?php echo $message->user_name;?>
+     <br>
+     <?php echo $message->user_signature;?>
      </div>
 
      <p>
