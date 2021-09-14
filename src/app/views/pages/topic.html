@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a7577a9f0e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">   
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="/src/public/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="/src/public/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300,400,500,600,800&display=swap" rel="stylesheet">
@@ -14,11 +14,12 @@
 </head>
 <body>
     <header>
+        <div class="log">
+            <a href="#"><i class="far fa-edit"></i> Register</a>
+            <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
 <h1>The forum</h1>
-<div class="log">
-    <a href="#"><i class="far fa-edit"></i> Register</a>
-    <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
-</div>
+
     </header>
 
     <div class="container-fluid">
@@ -51,7 +52,7 @@
         <article class="container-fluid messages">
             <div class="row message1">
                 <div class="col-md-3 user">
-                    <img class="avatar" src="css/2b2d36512e6c858fcd29edde12a4c9c2.jpg" alt="Minoo">
+                    <img class="avatar" src="/src/public/images/chat.jpg" alt="Minoo">
                     <p class="pseudo">Minoo</p>
                     <p class="level">Admin</p>
                     <p class="numberOfPosts">Posts: <div class="num">457</div></p>
@@ -69,7 +70,7 @@
             </div>
             <div class="row message2">
                 <div class="col-md-3 user">
-                    <img class="avatar" src="css/2b2d36512e6c858fcd29edde12a4c9c2.jpg" alt="Minet">
+                    <img class="avatar" src="/src/public/images/chat.jpg" alt="Minet">
                     <p class="pseudo">Minet</p>
                     <p class="level">Member</p>
                     <p class="numberOfPosts">Posts: <div class="num">47</p></div>
@@ -103,29 +104,34 @@
     </div>
     <footer>
             <div class="logos">
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-apple"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-codepen"></i>
-                <i class="fab fa-google-plus-g"></i>
-                <i class="fab fa-digg"></i>
-                <i class="fab fa-pinterest-p"></i>
+                <ul>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-apple"></i></li>
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-codepen"></i></li>
+                <li><i class="fab fa-google-plus-g"></i></li>
+                <li><i class="fab fa-digg"></i></li>
+                <li><i class="fab fa-pinterest-p"></i></li>
+                </ul>
             </div>
-            <div class="endPagePath">
-                <a href="#"><i class="fas fa-home"></i>Home</a>
-                <a href="#">
-                    < Boards</a>
-            </div>
-            <div class="endPageLinks">
-                <a href="#"><i class="fas fa-envelope"></i>Contact us</a>
-                <a href="#"><i class="fas fa-shield-alt"></i>The team</a>
-                <a href="#"><i class="fas fa-check"></i>Terms</a>
-                <a href="#"><i class="fas fa-lock"></i>Privacy</a>
-                <a href="#"><i class="fas fa-users"></i>Members</a>
-                <a href="#"><i class="fas fa-trash-alt"></i>Delete cookies</a>
-                <p>All time are UTC</p>
-            </div>
+            <div class="lastLine">
+            <ul class="endPagePath">
+                <li><a href="#"><i class="fas fa-home"></i>  Home</a></li>
+                <li><a href="#">
+                    <  Boards</a></li>
+            </ul>
+            <ul class="endPageLinks">
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact us</a></li>
+                <li><a href="#"><i class="fas fa-shield-alt"></i> The team</a></li>
+                <li><a href="#"><i class="fas fa-check"></i> Terms</a></li>
+                <li> <a href="#"><i class="fas fa-lock"></i> Privacy</a></li>
+                <li> <a href="#"><i class="fas fa-users"></i> Members</a></li>
+                <li><a href="#"><i class="fas fa-trash-alt"></i> Delete cookies</a></li>
+                <li>All time are UTC</li>
+            </ul>
+            <a class="btn-up" href="#top"><i class="fas fa-arrow-up"></i></a>
+        </div>
         </footer>
-        <a class="btn-up" href="#top">^</a>
+        
 </body>
 </html>
