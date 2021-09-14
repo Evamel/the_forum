@@ -42,7 +42,7 @@ require APPROOT . '/views/includes/right.php';
                  <br>    
                   <?php echo $messages->total;?>
                  <br>
-                 <?php echo 'posted on: ' . date('F j h:m', strtotime($messages->last_topic_date)) ?>
+                 <?php echo 'last post: ' . date('F j h:m', strtotime($messages->last_topic_date)) ?>
                  <br>
                  </div>
       <?php endforeach;?>

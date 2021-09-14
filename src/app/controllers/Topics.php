@@ -6,8 +6,9 @@ class Topics extends Controller{
 
 
     public function index() {
+        $board_id = $_GET['board_id'];
         $topics = $this->topicModel->findAllTopics();
-        $messages = $this->topicModel->messagesByTopic();
+        $messages = $this->topicModel->messagesByTopic($board_id);
    
 
         $data = [
