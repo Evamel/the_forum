@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">   
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300,400,500,600,800&display=swap" rel="stylesheet">
-    <title>Messages</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300,400,500,600,800&display=swap" rel="stylesheet">
+    <title>Topic</title>
 </head>
 <body>
     <header>
 <h1>The forum</h1>
 <div class="log">
-    <p><i class="far fa-edit"></i> Register</p>
-    <p><i class="fas fa-sign-in-alt"></i> Login</p>
+    <a href="#"><i class="far fa-edit"></i> Register</a>
+    <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
 </div>
     </header>
 
