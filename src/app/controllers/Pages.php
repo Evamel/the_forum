@@ -2,11 +2,23 @@
 class Pages extends Controller {
     public function __construct(){
        $this->userModel = $this->model('User');
+       $this->boardModel = $this->model('Board'); 
     }
 
     public function index() {
-      
-        $this->view('pages/index');
+        $boards = $this->boardModel->getBoards();
+        $sumTopics = $this->boardModel->sumTopics();
+        $sumPosts = $this->boardModel->sumPosts();
+        $lastPost = $this->boardModel->lastPostDate();
+
+        $data = [
+          'boards' => $boards,
+          'sumTopics' =>$sumTopics,
+          'sumPosts' =>$sumPosts,
+          'lastPost' =>$lastPost
+        ];
+   
+        $this->view('pages/index', $data);
     }
 
     public function about() {
@@ -18,7 +30,7 @@ class Pages extends Controller {
             'title' => 'User page',
             'users' => $users
         ];
-       $this->view('pages/members', $data);
+       $this->view('pages/users', $data);
     }
 
 }

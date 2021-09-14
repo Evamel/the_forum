@@ -8,7 +8,10 @@ require APPROOT . '/views/includes/head.php';
 var_dump($_SESSION);  
 ?>
 <?php 
-var_dump($_GET['$id']);  
+var_dump($_GET['id']);  
+?>
+<?php 
+var_dump($data['messages']);  
 ?>
 
 <?php
@@ -26,7 +29,7 @@ require APPROOT . '/views/includes/right.php';
     <div class="container-item">
     
 
-     <div class="container-user">   
+     <div id="container-user">   
      <?php echo $message->user_name;?>
      <br>
      <?php echo $message->user_signature;?>

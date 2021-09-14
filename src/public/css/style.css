@@ -119,4 +119,12 @@ a.btn:hover {
 
 #container-user {
   background-color: fuchsia;
+  max-width: 40%;
+}
+
+#container-item {
+  border-width: 2px;
+  border-color: rgb(150, 4, 247);
+  max-width: 40%;
+  background-color: mediumslateblue;
 }

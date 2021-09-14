@@ -6,7 +6,7 @@ class Topics extends Controller{
 
 
     public function index() {
-
+       
         $topics = $this->topicModel->findAllTopics();
         $messages = $this->topicModel->messagesByTopic();
    

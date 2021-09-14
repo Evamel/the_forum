@@ -7,6 +7,13 @@ require APPROOT . '/views/includes/head.php';
 <?php 
 var_dump($_SESSION);  
 ?>
+<?php 
+var_dump($_GET['id']);  
+?>
+<?php 
+var_dump($data['topics']);  
+var_dump(str_split($_GET['id']));
+?>
 
 
 <?php
@@ -19,6 +26,7 @@ require APPROOT . '/views/includes/right.php';
 
 
 <div class ="container">
+
      <?php if(isLoggedIn()): ?> 
      <a class="btn green" href="<?php echo URLROOT;?>/topics/create">
          Create New Topic
@@ -27,9 +35,13 @@ require APPROOT . '/views/includes/right.php';
   
     <?php foreach($data['messages'] as $messages):?>
     <div class="container-item">
-        <h2>
+
+    <a href="<?php echo URLROOT . "/messages/index.php?id=" . $messages->topic_id ?>">
+         <h2>
          <?php echo $messages->topic_subject;?>
          </h2>
+        </a>
+       
 
                  <div class="container-user">  
                  <?php echo $messages->total;?>

@@ -40,7 +40,7 @@ class Messages extends Controller{
        }
        if(empty($data['contentError'])){
         if($this->messageModel->addMessage($data)){
-            header("Location:" . URLROOT . "/messages");
+            header("Location:" . URLROOT . "/pages");
         } else {
             die("Something mew wrong, try again");
         }
@@ -67,6 +67,7 @@ class Messages extends Controller{
 
     
       $data =[
+        
         'message' => $message,
         'content' =>'',
         'contentError' => '',
@@ -87,7 +88,7 @@ class Messages extends Controller{
      }
      if(empty($data['contentError'])){
       if($this->messageModel->updateMessage($data)){
-          header("Location:" . URLROOT . "/messages");
+          header("Location:" . URLROOT . "/messages/index.php?id=" . $message->topic_id);
       } else {
           die("Something mew wrong, try again");
       }
@@ -122,7 +123,7 @@ class Messages extends Controller{
         $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
         
         if($this->messageModel->deleteMessage($id)){
-            header("Location:" . URLROOT . "/messages");
+            header("Location:" . URLROOT . "/messages/index.php?id=" . $message->topic_id);
         } else {
            die('Something went wrong');
         }
