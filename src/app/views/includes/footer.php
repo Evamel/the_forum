@@ -20,7 +20,7 @@
             <a href="<?php echo URLROOT;?>/pages/privacy">Privacy</a>
         </li>
         <li>
-            <a href="<?php echo URLROOT;?>/pages/members">Members</a>
+            <a href="<?php echo URLROOT;?>/pages/users">Members</a>
         </li>
         <li>
             <a href="<?php echo URLROOT;?>/pages/index">Delete cookies</a>
