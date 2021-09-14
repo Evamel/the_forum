@@ -1,0 +1,325 @@
+
+
+header{
+    background: -webkit-linear-gradient(90deg, rgb(174, 106, 179), rgb(72, 104, 220));
+    background: linear-gradient(90deg, rgb(174, 106, 179), rgb(72, 104, 220));
+    opacity: 0.6;
+   
+    text-align: center;
+    height: 20rem;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    color: white;
+    font-weight: lighter;
+    h1{
+        font-weight: lighter;
+        justify-content: center;
+        font-size: 100px;
+    }
+    .log{
+        display: inline-flex;
+        padding-right: 20px;
+        float: right;
+        font-size: 20px;
+        i{
+            padding: 4px;
+        }
+    }
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-fluid{
+    
+    .path{
+        ul{
+        list-style: none;
+        display: flex;
+        justify-content: left;
+        font-family: 'Rubik', sans-serif;
+            a{
+                text-decoration: none;
+                color: #6A6A6A;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+h2{
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    color: #6A6A6A;
+}
+
+.rules{
+    background-color: #ECD5D9;
+    margin-left: 3rem;
+    border-left: solid 3px #BE3853;
+    border-radius: 5px;
+    color: #6A6A6A;
+    text-align: left;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.btnMessages{
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: left;
+        .reply{
+            font-weight: bold;
+            color: white;
+            background-color: #B06AB3;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            height: 40px;
+        }
+
+        .tool{
+            font-weight: bold;
+            color: #909090;
+            background-color: #F7F7F7;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            width: 70px;
+            height: 40px;
+        }
+
+        .searchbarMessage{
+            font-weight: bold;
+            color: white;
+            background-color: #F7F7F7;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+            width: 22rem;
+            height: 40px;
+            text-align: center;
+
+            .fa{
+            font-weight: bold;
+            color: #909090;
+            background-color: #F7F7F7;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            width: auto;
+            height: 40px;
+            }
+
+            .fas{
+                font-weight: bold;
+            color: #909090;
+            background-color: #F7F7F7;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            width: auto;
+            height: 40px;
+            }
+        }
+}
+
+.messages{
+    font-family: 'Rubik', sans-serif;
+    margin-top: 20px;
+    //background-color: #F9F9F9;
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 10px;
+    .message1{
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .user{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .avatar{
+            border-radius: 100px;
+            margin-bottom: 2rem;
+            width: 140px;
+            }
+            .pseudo{
+            color: #AB2819;
+            font-weight: bolder;
+            }
+            .level{
+                color: gray;
+            }
+            .numberOfPosts{
+                color: black;
+                font-weight: bold;
+                .num{
+                    color: gray;
+                    font-weight: bold;
+                }
+            }
+        }
+        .detailsMessage{
+            .date{
+                color: gray;
+                font-weight: 600;
+            }
+            .hour{
+                color: gray;
+                font-weight: 600; 
+            }
+            .textMessage{
+                color: black;
+            }
+            .lineMessSign{
+                border-top: solid #D9DCDF 1px;
+            }
+            .signatureMessage{
+                color: black;
+                padding-top: 20px;
+            }
+        }
+        .quote{
+            background-color: #F7F7F7;
+            color: #8F8F8F;
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 12px;
+            border: solid #8F8F8F 1px;
+        }
+    }
+
+    .message2{
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-left: 20px;
+        margin-right: 20px;
+        .user{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .avatar{
+            border-radius: 100px;
+            margin-bottom: 2rem;
+            width: 140px;
+            }
+            .pseudo{
+            color: #AB2819;
+            font-weight: bolder;
+            }
+            .level{
+                color: gray;
+            }
+            .numberOfPosts{
+                color: black;
+                font-weight: bold;
+                .num{
+                    color: gray;
+                    font-weight: bold;
+                }
+            }
+        }
+        .detailsMessage{
+            .date{
+                color: gray;
+                font-weight: 600;
+            }
+            .hour{
+                color: gray;
+                font-weight: 600; 
+            }
+            .textMessage{
+                color: black;
+            }
+            .lineMessSign{
+                border-top: solid #D9DCDF 1px;
+
+            }
+            .signatureMessage{
+                padding-top: 20px;
+                color: black;
+            }
+        }
+        .quote{
+            background-color: #F7F7F7;
+            color: #8F8F8F;
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 12px;
+            border: solid #8F8F8F 1px;
+        }
+    }
+}
+
+.btnMessageEnd{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    .reply{
+    font-weight: bold;
+    color: white;
+    background-color: #B06AB3;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 40px;
+    }
+    .tool{
+    font-weight: bold;
+    color: #909090;
+    background-color: #F7F7F7;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;
+    }
+}
+
+.pathEnd{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    a{
+        text-decoration: none;
+    color: #6A6A6A;
+    padding: 5px;
+    }
+    #jumpTo{
+        font-weight: bold;
+            color: #909090;
+            background-color: #F7F7F7;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            width: 130px;
+            height: 40px;
+    }
+}
