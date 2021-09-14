@@ -2,7 +2,6 @@
 class Pages extends Controller {
     public function __construct(){
        $this->userModel = $this->model('User');
-       $this->boardModel = $this->model('Board');
     }
 
     public function index() {
@@ -16,19 +15,10 @@ class Pages extends Controller {
     public function users(){
         $users = $this->userModel->getUsers();
         $data= [
-            'title' => 'Home page',
+            'title' => 'User page',
             'users' => $users
         ];
-       $this->view('pages/users', $data);
-    }
-
-    public function board() {
-        $boards = $this->boardModel->getBoards();
-        $data= [
-            'title' => 'Home page',
-            'boards' => $boards
-        ];
-        $this->view('pages/board', $data);
+       $this->view('pages/members', $data);
     }
 
 }

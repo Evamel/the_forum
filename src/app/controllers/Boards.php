@@ -9,7 +9,7 @@ class Boards extends Controller{
         $boards = $this->boardModel->getBoards();
         $sumTopics = $this->boardModel->sumTopics();
         $sumPosts = $this->boardModel->sumPosts();
-        $lastPost = $this->boardModel->lastPost();
+        $lastPost = $this->boardModel->lastPostDate();
        
    
 
@@ -23,6 +23,4 @@ class Boards extends Controller{
 
         $this->view('boards/index', $data);
     }
-
-
 }

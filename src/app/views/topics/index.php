@@ -8,6 +8,7 @@ require APPROOT . '/views/includes/head.php';
 var_dump($_SESSION);  
 ?>
 
+
 <?php
 require APPROOT . '/views/includes/navigation.php';
 ?>

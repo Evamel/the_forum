@@ -23,7 +23,7 @@ require APPROOT . '/views/includes/right.php';
     <?php foreach($data['boards'] as $board):?>
     <div class="container-item">
     
-        <a href="<?php echo URLROOT . "/topics/index/" . $boards->board_id ?>">
+        <a href="<?php echo URLROOT . "/topics/index/" . $board->board_id ?>">
         <h2>
          <?php echo $board->board_name;?>
          </h2>
@@ -38,11 +38,11 @@ require APPROOT . '/views/includes/right.php';
         </div>
 
                  <div class="container-infos">  
-                 <?php echo $topics->total;?>
+                 <?php echo $board->total;?>
                  <br>    
                   <?php echo $messages->total;?>
                  <br>
-                 <?php echo 'last post: ' . date('F j h:m', strtotime($messages->last_topic_date)) ?>
+                 <?php echo 'last post: ' . date('F j h:m', strtotime($board->topic_date)) ?>
                  <br>
                  </div>
       <?php endforeach;?>

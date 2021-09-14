@@ -7,6 +7,10 @@ require APPROOT . '/views/includes/head.php';
 <?php 
 var_dump($_SESSION);  
 ?>
+<?php 
+var_dump($_GET['$id']);  
+?>
+
 
 <?php
 require APPROOT . '/views/includes/navigation.php';
