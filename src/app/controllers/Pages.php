@@ -7,19 +7,35 @@ class Pages extends Controller {
 
     public function index() {
         $boards = $this->boardModel->getBoards();
-        $sumTopics = $this->boardModel->sumTopics();
-        $sumPosts = $this->boardModel->sumPosts();
-        $lastPost = $this->boardModel->lastPostDate();
+        $sumTopics = $this->boardModel->sumTopics($boards);
+        $sumPosts = $this->boardModel->sumPosts($boards);
+        $lastPost = $this->boardModel->lastPostDate($boards);
 
         $data = [
           'boards' => $boards,
-          'sumTopics' =>$sumTopics,
-          'sumPosts' =>$sumPosts,
-          'lastPost' =>$lastPost
+          'sumTopics' => $sumTopics,
+          'sumPosts' => $sumPosts,
+          'lastPost' => $lastPost
         ];
+
+        
    
         $this->view('pages/index', $data);
     }
+
+
+    public function getSum($id){
+        $board =$this->boardModel->getBoardById($id);
+
+        $data =[
+            'id' => $id,
+            'board' => $board,
+         ];
+
+         $result =$this->boardModel->sumTopics($data);
+         return $result;
+    }
+
 
     public function about() {
         $this->view('pages/about');

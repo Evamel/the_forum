@@ -5,7 +5,8 @@ require APPROOT . '/views/includes/head.php';
 <div id="section-landing">
  
 <?php 
-var_dump($_SESSION);  
+//var_dump($_SESSION);  
+var_dump($data);  
 ?>
 
 <?php
@@ -21,7 +22,7 @@ require APPROOT . '/views/includes/right.php';
     
   
     <?php foreach($data['boards'] as $board):?>
-    <div class="container-item">
+    <div id="container-item">
     
         <a href="<?php echo URLROOT . "/topics/index.php?id=" . $board->board_id ?>">
         <h2>
@@ -33,21 +34,24 @@ require APPROOT . '/views/includes/right.php';
          <?php echo $board->board_description;?>
         </p>
 
-        <div class="container-topics">
+        <div id="container-topics">
        
         </div>
 
-                 <div class="container-infos">  
-                 <?php echo $board->total;?>
+                 <div id="container-infos">  
+                 <p>
+                 <?php echo $result->topicTotal;?>
+                 </p>
                  <br>    
                   <?php echo $messages->total;?>
                  <br>
-                 <?php echo 'last post: ' . date('F j h:m', strtotime($board->board_date)) ?>
+                 <?php echo 'last post: ' . date('F j h:m', strtotime($board->board_id)) ?>
                  <br>
+                 </div>
                  </div>
       <?php endforeach;?>
 
-    </div>
+    
 
 
 </div>

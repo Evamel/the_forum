@@ -24,7 +24,7 @@ class Topics extends Controller{
 
     public function create(){
        if (!isLoggedIn()){
-         header("Location:" . URLROOT . "/topics");
+         header("Location:" . URLROOT . "/pages");
        }
 
       $data =[
@@ -47,7 +47,7 @@ class Topics extends Controller{
        }
        if(empty($data['subjectError'])){
         if($this->topicModel->createTopic($data)){
-            header("Location:" . URLROOT . "/topics");
+            header("Location:" . URLROOT . "/pages");
         } else {
             die("Something mew wrong, try again");
         }
@@ -94,7 +94,7 @@ class Topics extends Controller{
      }
      if(empty($data['subjectError'])){
       if($this->topicModel->updateTopic($data)){
-          header("Location:" . URLROOT . "/topics");
+          header("Location:" . URLROOT . "/topics/index.php?id=" . $topic->board_id );
       } else {
           die("Something mew wrong, try again");
       }
@@ -114,7 +114,7 @@ class Topics extends Controller{
         if(!isLoggedIn()){
              header("Location: " . URLROOT . "/topics");
         } elseif($topic->user_id !=$_SESSION['user_id']) {
-         header("Location: " . URLROOT . "/topics");
+         header("Location: " . URLROOT . "/pages");
         }
  
      
@@ -129,7 +129,7 @@ class Topics extends Controller{
         $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
         
         if($this->topicModel->deleteTopic($id)){
-            header("Location:" . URLROOT . "/topics");
+            header("Location:" . URLROOT . "/topics/index.php?id=" . $topic->board_id );
         } else {
            die('Something went wrong');
         }

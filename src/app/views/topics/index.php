@@ -5,14 +5,14 @@ require APPROOT . '/views/includes/head.php';
 <div id="section-landing">
  
 <?php 
-var_dump($_SESSION);  
+//var_dump($_SESSION);  
 ?>
 <?php 
-var_dump($_GET['id']);  
+//var_dump($_GET['id']);  
 ?>
 <?php 
-var_dump($data['topics']);  
-var_dump(str_split($_GET['id']));
+//var_dump($data['topics']);  
+//var_dump(str_split($_GET['id']));
 ?>
 
 
@@ -34,7 +34,7 @@ require APPROOT . '/views/includes/right.php';
      <?php endif ?>
   
     <?php foreach($data['messages'] as $messages):?>
-    <div class="container-item">
+    <div id="container-item">
 
     <a href="<?php echo URLROOT . "/messages/index.php?id=" . $messages->topic_id ?>">
          <h2>
@@ -43,7 +43,7 @@ require APPROOT . '/views/includes/right.php';
         </a>
        
 
-                 <div class="container-user">  
+                 <div id="container-user">  
                  <?php echo $messages->total;?>
                  <br>    
                   <?php echo $messages->user_name;?>
@@ -62,10 +62,11 @@ require APPROOT . '/views/includes/right.php';
       <form action="<?php echo URLROOT . "/topics/delete/" . $messages->topic_id?>" method="POST">
       <input type="submit" name="delete" value="Delete" class ="btn red">
       </form>
+      </div>
       <?php endif; ?>
       <?php endforeach;?>
 
-    </div>
+  
 
 
 </div>
@@ -73,5 +74,5 @@ require APPROOT . '/views/includes/right.php';
 <?php
 require APPROOT . '/views/includes/footer.php';
 ?>
-</div>
+
 
