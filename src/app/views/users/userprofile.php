@@ -22,7 +22,6 @@ require APPROOT . '/views/includes/head.php';
     $result = $_SESSION['date'];
     $date = date_create($row[0]);
     // $avatar = "https://www.gravatar.com/avatar/" . md5($_SESSION['email']) . "?s=64&d=mp";
-    // echo '<img src=' . $avatar . '>';
     echo '<img src=' . $_SESSION['avatar'] . ' alt="avatar">';
     ?>
 

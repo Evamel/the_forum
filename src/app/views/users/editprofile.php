@@ -15,12 +15,12 @@ require APPROOT . '/views/includes/head.php';
             <h2>Your Profile</h2>
             <form action="<?php echo URLROOT; ?>/users/editprofile" method="POST">
 
-                Your avatar :
-                <input type="file" value="">
-                <span class="invalidFeedback">
-                    <?php echo $data['avatarError'] ?>
-                </span>
-                <br>
+                <!-- Your avatar : -->
+                <!-- <input type="file" value="<//?php echo $_SESSION['avatar'] ?>"> -->
+                <!-- <span class="invalidFeedback"> -->
+                <!-- <//?php echo $data['avatarError'] ?> -->
+                <!-- </span> -->
+                <!-- <br> -->
                 Your kitty name:
                 <input type="text" value="<?php echo $_SESSION['username'] ?>" name="username">
                 <span class="invalidFeedback">
