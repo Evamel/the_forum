@@ -27,10 +27,9 @@ class Topic {
 
 
     public function createTopic($data){
-      $getid = $_GET['id'];
       $this->db->query('INSERT INTO topics (user_id, topic_subject, board_id) VALUES (:user_id, :subject, :board_id)');
       $this->db->bind(':user_id',$data['user_id']);
-      $this->db->bind(':board_id',$getid);
+      $this->db->bind(':board_id',$data['board']);
       $this->db->bind(':subject',$data['subject']);
       if ($this->db->execute()){
           return true;

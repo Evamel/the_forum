@@ -23,14 +23,15 @@ class Topics extends Controller{
 
 
     public function create(){
+      $id= $_GET['id'];
        if (!isLoggedIn()){
-         header("Location:" . URLROOT . "/pages");
+        header("Location:" . URLROOT . "/topics/index?id=". $_GET['id']);
        }
 
       $data =[
          'user_id' =>$_SESSION['user_id'],
          'subject' =>'',
-         'board' =>'',
+         'board' =>$id,
          'subjectError' => '',
       ];
 
@@ -39,7 +40,7 @@ class Topics extends Controller{
           $data =[
             'user_id' =>$_SESSION['user_id'],
             'subject' =>trim($_POST['subject']),
-            'board' => '',
+            'board' => $id,
             'subjectError' => '',
          ];
        if(empty($data['subject'])){
@@ -47,7 +48,7 @@ class Topics extends Controller{
        }
        if(empty($data['subjectError'])){
         if($this->topicModel->createTopic($data)){
-            header("Location:" . URLROOT . "/pages");
+            header("Location:" . URLROOT . "/topics/index?id=". $_GET['id']);
         } else {
             die("Something mew wrong, try again");
         }
@@ -67,9 +68,9 @@ class Topics extends Controller{
         $topic =$this->topicModel->findTopicById($id);
 
        if(!isLoggedIn()){
-            header("Location: " . URLROOT . "/topics");
+        header("Location:" . URLROOT . "/topics/index?id=". $_GET['id']);
        } elseif($topic->user_id !=$_SESSION['user_id']) {
-        header("Location: " . URLROOT . "/topics");
+        header("Location:" . URLROOT . "/topics/index?id=". $_GET['id']);
        }
 
     
@@ -112,9 +113,9 @@ class Topics extends Controller{
         $topic =$this->topicModel->findTopicById($id);
 
         if(!isLoggedIn()){
-             header("Location: " . URLROOT . "/topics");
+          header("Location:" . URLROOT . "/topics/index?id=". $_GET['id']);
         } elseif($topic->user_id !=$_SESSION['user_id']) {
-         header("Location: " . URLROOT . "/pages");
+         header("Location:" . URLROOT . "/topics/index?id=". $_GET['id']);
         }
  
      

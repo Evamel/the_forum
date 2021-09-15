@@ -28,7 +28,7 @@ require APPROOT . '/views/includes/right.php';
 <div class ="container">
 
      <?php if(isLoggedIn()): ?> 
-     <a class="btn green" href="<?php echo URLROOT;?>/topics/create">
+     <a class="btn green" href="<?php echo URLROOT . "/topics/create?id=" .$_GET['id'] ?>">
          Create New Topic
      </a>
      <?php endif ?>
