@@ -23,9 +23,8 @@ class Board
     
 
 
-    public function sumTopics($data){
-        $this->db->query('SELECT COUNT(topic_id) AS topicTotal,topics.board_id,boards.board_id,boards.board_name FROM topics RIGHT OUTER JOIN boards ON topics.board_id = boards.board_id WHERE boards.board_id =:id GROUP BY board_name;');
-        $this->db->bind(':id', $data['id']);
+    public function sumTopics(){
+        $this->db->query('SELECT COUNT(topic_id) AS topicTotal,topics.board_id,boards.board_id,boards.board_name FROM topics RIGHT OUTER JOIN boards ON topics.board_id = boards.board_id GROUP BY board_name;');
         $results = $this->db->resultSet();
         return $results;
      }

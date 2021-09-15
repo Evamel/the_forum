@@ -24,18 +24,6 @@ class Pages extends Controller {
     }
 
 
-    public function getSum($id){
-        $board =$this->boardModel->getBoardById($id);
-
-        $data =[
-            'id' => $id,
-            'board' => $board,
-         ];
-
-         $result =$this->boardModel->sumTopics($data);
-         return $result;
-    }
-
 
     public function about() {
         $this->view('pages/about');
