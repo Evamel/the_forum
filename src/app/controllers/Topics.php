@@ -39,7 +39,7 @@ class Topics extends Controller{
           $data =[
             'user_id' =>$_SESSION['user_id'],
             'subject' =>trim($_POST['subject']),
-            'board' => 3,
+            'board' => '',
             'subjectError' => '',
          ];
        if(empty($data['subject'])){
