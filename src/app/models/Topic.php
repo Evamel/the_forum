@@ -2,7 +2,6 @@
 class Topic
 {
   private $db;
-
   public function __construct()
   {
     $this->db = new Database;
@@ -10,21 +9,21 @@ class Topic
 
   public function findAllTopics()
   {
-    $this->db->query('SELECT topics.topic_subject, topics.topic_id, topics.user_id, users.user_name FROM topics LEFT JOIN users ON topics.user_id = users.user_id ORDER BY topic_date ASC');
+    $getid = $_GET['id'];
+    $this->db->query('SELECT topics.topic_subject, topics.topic_id, topics.user_id, users.user_name FROM topics LEFT JOIN users ON topics.user_id = users.user_id WHERE board_id=:id ORDER BY topic_date ASC');
+    $this->db->bind(':id', $getid);
     $results = $this->db->resultSet();
-    //query to display user name and signature
     return $results;
   }
 
   public function messagesByTopic()
   {
-    $this->db->query('SELECT COUNT(message_id) AS total,topic_subject,topic_date,user_name,topics.topic_id,topics.board_id,users.user_id FROM messages RIGHT OUTER JOIN topics ON messages.topic_id = topics.topic_id INNER JOIN users ON topics.user_id = users.user_id GROUP BY topic_subject ORDER BY total ASC;');
+    $getid = $_GET['id'];
+    $this->db->query('SELECT COUNT(message_id) AS total,topic_subject,topic_date,user_name,topics.topic_id,topics.board_id,users.user_id FROM messages RIGHT OUTER JOIN topics ON messages.topic_id = topics.topic_id INNER JOIN users ON topics.user_id = users.user_id WHERE board_id=:id  GROUP BY topic_subject ORDER BY total ASC;');
+    $this->db->bind(':id', $getid);
     $results = $this->db->resultSet();
-    //query to display user name and signature
     return $results;
   }
-
-
 
   public function createTopic($data)
   {

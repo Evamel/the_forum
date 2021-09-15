@@ -9,10 +9,9 @@ class Topics extends Controller
 
   public function index()
   {
-    $board_id = $_GET['board_id'];
-    $topics = $this->topicModel->findAllTopics();
-    $messages = $this->topicModel->messagesByTopic($board_id);
 
+    $topics = $this->topicModel->findAllTopics();
+    $messages = $this->topicModel->messagesByTopic();
 
     $data = [
       'topics' => $topics,
@@ -23,14 +22,11 @@ class Topics extends Controller
     $this->view('topics/index', $data);
   }
 
-
-
   public function create()
   {
     if (!isLoggedIn()) {
-      header("Location:" . URLROOT . "/topics");
+      header("Location:" . URLROOT . "/pages");
     }
-
     $data = [
       'user_id' => $_SESSION['user_id'],
       'subject' => '',
@@ -51,7 +47,7 @@ class Topics extends Controller
       }
       if (empty($data['subjectError'])) {
         if ($this->topicModel->createTopic($data)) {
-          header("Location:" . URLROOT . "/topics");
+          header("Location:" . URLROOT . "/pages");
         } else {
           die("Something mew wrong, try again");
         }
@@ -77,12 +73,10 @@ class Topics extends Controller
       header("Location: " . URLROOT . "/topics");
     }
 
-
     $data = [
       'topic' => $topic,
       'subject' => '',
       'subjectError' => '',
-
     ];
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -94,24 +88,32 @@ class Topics extends Controller
         'subject' => trim($_POST['subject']),
         'subjectError' => '',
       ];
-      if (empty($data['subject'])) {
-        $data['subjectError'] = 'your subject is empty';
-      }
-      if (empty($data['subjectError'])) {
-        if ($this->topicModel->updateTopic($data)) {
-          header("Location:" . URLROOT . "/topics");
-        } else {
-          die("Something mew wrong, try again");
+
+      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        $data = [
+          'id' => $id,
+          'topic' => $topic,
+          'user_id' => $_SESSION['user_id'],
+          'subject' => trim($_POST['subject']),
+          'subjectError' => '',
+        ];
+        if (empty($data['subject'])) {
+          $data['subjectError'] = 'your subject is empty';
         }
-      } else {
-        $this->view('topics/edit', $data);
+        if (empty($data['subjectError'])) {
+          if ($this->topicModel->updateTopic($data)) {
+            header("Location:" . URLROOT . "/topics/index.php?id=" . $topic->board_id);
+          } else {
+            die("Something mew wrong, try again");
+          }
+        } else {
+          $this->view('topics/edit', $data);
+        }
       }
+      $this->view('topics/edit', $data);
     }
-    $this->view('topics/edit', $data);
   }
-
-
-
 
   public function delete($id)
   {
@@ -120,15 +122,29 @@ class Topics extends Controller
     if (!isLoggedIn()) {
       header("Location: " . URLROOT . "/topics");
     } elseif ($topic->user_id != $_SESSION['user_id']) {
-      header("Location: " . URLROOT . "/topics");
+      header("Location: " . URLROOT . "/pages");
     }
-
 
     $data = [
       'topic' => $topic,
       'subject' => '',
       'subjectError' => '',
+    ];
 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+      if ($this->topicModel->deleteTopic($id)) {
+        header("Location:" . URLROOT . "/topics/index.php?id=" . $topic->board_id);
+      } else {
+        die('Something went wrong');
+      }
+    }
+
+    $data = [
+      'topic' => $topic,
+      'subject' => '',
+      'subjectError' => '',
     ];
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {

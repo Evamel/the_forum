@@ -21,6 +21,10 @@ body {
 h1 {
   text-align: center;
 }
+h2 {
+  background-color: mediumslateblue;
+}
+
 h3 {
   text-align: right;
 }
@@ -30,7 +34,6 @@ h5 {
 }
 p {
   color: indigo;
-  background-color: lavender;
 }
 .top-nav {
   display: block;
@@ -109,4 +112,16 @@ a.btn:hover {
 }
 #container-user {
   background-color: fuchsia;
+}
+
+#container-item {
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(150, 4, 247);
+  background-color: mediumslateblue;
+}
+
+a.btn.green {
+  margin-top: 3rem;
+  font-size: medium;
 }

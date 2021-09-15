@@ -1,13 +1,7 @@
-<<<<<<< HEAD
- <?php
-  //members// nous grands créateurs du site
-  echo 'About us'
-  ?>
-    
-=======
 <?php
 require APPROOT . '/views/includes/head.php';
 ?>
+
 <div id="section-landing">
  
 <?php 
@@ -29,10 +23,10 @@ require APPROOT . '/views/includes/right.php';
 <div class ="container">
 
 <?php
-   //nous grands créateurs du site
-    echo 'About us'
-    ?>
-  
+foreach ($data['users'] as $user): ?>
+   <p> <?php echo " Users:" . $user->user_name . " " . $user->user_email;
+    echo "<br>";?></p>
+    <?php endforeach;?>
 </div>
 </div>
 
@@ -40,4 +34,3 @@ require APPROOT . '/views/includes/right.php';
 require APPROOT . '/views/includes/footer.php';
 ?>
 
->>>>>>> Lisa

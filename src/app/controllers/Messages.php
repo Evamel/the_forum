@@ -6,7 +6,6 @@ class Messages extends Controller
     $this->messageModel = $this->model('Message');
   }
 
-
   public function index()
   {
     $messages = $this->messageModel->findAllMessages();
@@ -17,8 +16,6 @@ class Messages extends Controller
 
     $this->view('messages/index', $data);
   }
-
-
 
   public function answer()
   {
@@ -44,7 +41,7 @@ class Messages extends Controller
       }
       if (empty($data['contentError'])) {
         if ($this->messageModel->addMessage($data)) {
-          header("Location:" . URLROOT . "/messages");
+          header("Location:" . URLROOT . "/pages");
         } else {
           die("Something mew wrong, try again");
         }
@@ -54,10 +51,6 @@ class Messages extends Controller
     }
     $this->view('messages/answer', $data);
   }
-
-
-
-
 
   public function update($id)
   {
@@ -72,6 +65,7 @@ class Messages extends Controller
 
 
     $data = [
+
       'message' => $message,
       'content' => '',
       'contentError' => '',
@@ -92,7 +86,7 @@ class Messages extends Controller
       }
       if (empty($data['contentError'])) {
         if ($this->messageModel->updateMessage($data)) {
-          header("Location:" . URLROOT . "/messages");
+          header("Location:" . URLROOT . "/messages/index.php?id=" . $message->topic_id);
         } else {
           die("Something mew wrong, try again");
         }
@@ -103,9 +97,6 @@ class Messages extends Controller
     $this->view('messages/update', $data);
   }
 
-
-
-
   public function delete($id)
   {
     $message = $this->messageModel->findMessageById($id);
@@ -115,7 +106,6 @@ class Messages extends Controller
     } elseif ($message->user_id != $_SESSION['user_id']) {
       header("Location: " . URLROOT . "/messages");
     }
-
 
     $data = [
       'message' => $message,
@@ -128,7 +118,7 @@ class Messages extends Controller
       $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
       if ($this->messageModel->deleteMessage($id)) {
-        header("Location:" . URLROOT . "/messages");
+        header("Location:" . URLROOT . "/messages/index.php?id=" . $message->topic_id);
       } else {
         die('Something went wrong');
       }

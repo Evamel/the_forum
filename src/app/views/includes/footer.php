@@ -5,7 +5,7 @@
                 <a href="<?php echo URLROOT; ?>/pages/index">Home</a>
             </li>
             <li>
-                <a href="<?php echo URLROOT; ?>/pages/board">Board index</a>
+                <a href="<?php echo URLROOT; ?>/boards/index">Board index</a>
             </li>
             <li>
                 <a href="<?php echo URLROOT; ?>/pages/contact">Contact</a>
@@ -25,6 +25,8 @@
             <li>
                 <a href="<?php echo URLROOT; ?>/pages/index">Delete cookies</a>
             </li>
+
+        </ul>
 
         </ul>
 

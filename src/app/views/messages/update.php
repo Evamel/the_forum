@@ -13,9 +13,16 @@ require APPROOT . '/views/includes/head.php';
     ?>
 
     <?php
-    require APPROOT . '/views/includes/right.php';
+    var_dump($_SESSION);
     ?>
 
+    <?php
+    require APPROOT . '/views/includes/navigation.php';
+    ?>
+
+    <?php
+    require APPROOT . '/views/includes/right.php';
+    ?>
 
     <div class="container">
 

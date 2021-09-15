@@ -3,14 +3,24 @@ class Pages extends Controller
 {
     public function __construct()
     {
+        $this->userModel = $this->model('User');
         $this->boardModel = $this->model('Board');
-        $this->messageModel = $this->model('Message');
-        $this->topicModel = $this->model('Topic');
     }
 
     public function index()
     {
-        $this->view('pages/index');
+        $boards = $this->boardModel->getBoards();
+        $sumTopics = $this->boardModel->sumTopics($boards);
+        $sumPosts = $this->boardModel->sumPosts($boards);
+        $lastPost = $this->boardModel->lastPostDate($boards);
+
+        $data = [
+            'boards' => $boards,
+            'sumTopics' => $sumTopics,
+            'sumPosts' => $sumPosts,
+            'lastPost' => $lastPost
+        ];
+        $this->view('pages/index', $data);
     }
 
     public function about()
@@ -18,44 +28,28 @@ class Pages extends Controller
         $this->view('pages/about');
     }
 
-    public function board()
+    public function contact()
     {
-        $boards = $this->boardModel->getBoards();
-        $data = [
-            'title' => 'Home page',
-            'boards' => $boards
-        ];
-        $this->view('pages/board', $data);
+        $this->view('pages/contact');
     }
 
-    // public function message()
-    // {
-    //     $messages = $this->messageModel->getMessages();
-    //     $data = [
-    //         'title' => 'Messages',
-    //         'messages' => $messages
-    //     ];
-    //     $this->view('pages/message', $data);
-    // }
-    // View message doesn't exist, do I need create one?
-
-    public function topic()
+    public function privacy()
     {
-        $topics = $this->topicModel->getTopics();
-        $data = [
-            'title' => 'Topic',
-            // 'content'=> 'Description'; ??
-            'topics' => $topics
-        ];
-        $this->view('pages/topic', $data);
+        $this->view('pages/privacy');
     }
-    public function newTopic()
+
+    public function terms()
     {
-        $newtopics = $this->topicModel->getTopics();
+        $this->view('pages/terms');
+    }
+
+    public function users()
+    {
+        $users = $this->userModel->getUsers();
         $data = [
-            'title' => 'Topic',
-            'topics' => $newtopics
+            'title' => 'User page',
+            'users' => $users
         ];
-        $this->view('pages/newtopic', $data);
+        $this->view('pages/users', $data);
     }
 }
