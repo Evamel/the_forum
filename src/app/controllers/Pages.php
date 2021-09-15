@@ -18,8 +18,6 @@ class Pages extends Controller {
           'lastPost' => $lastPost
         ];
 
-        
-   
         $this->view('pages/index', $data);
     }
 
@@ -28,6 +26,19 @@ class Pages extends Controller {
     public function about() {
         $this->view('pages/about');
     }
+
+    public function contact() {
+        $this->view('pages/contact');
+    }
+
+    public function privacy() {
+        $this->view('pages/privacy');
+    }
+
+    public function terms() {
+        $this->view('pages/terms');
+    }
+
     public function users(){
         $users = $this->userModel->getUsers();
         $data= [
