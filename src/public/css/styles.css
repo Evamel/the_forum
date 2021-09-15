@@ -1,7 +1,6 @@
 header {
   background: -webkit-gradient(linear, left top, right top, from(#ae6ab3), to(#4868dc));
   background: linear-gradient(90deg, #ae6ab3, #4868dc);
-  opacity: 0.6;
   text-align: center;
   height: 20rem;
   margin-bottom: 20px;
@@ -37,8 +36,19 @@ header .log a {
 body {
   margin: 0;
   padding: 0;
+  background-color: #F9F9F9;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.container-fluid {
+  z-index: 2;
+  position: absolute;
+  margin: -77px 20px 0 20px;
+  border-radius: 10px;
+  background-color: white;
+  padding-top: 0px;
+  width: 96%;
 }
 
 .container-fluid .path ul {
@@ -49,7 +59,7 @@ body {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  font-family: 'Rubik', sans-serif;
+  padding: 20px 0px 0px 0px;
 }
 
 .container-fluid .path ul a {
@@ -73,6 +83,7 @@ h2 {
   color: #6A6A6A;
   text-align: left;
   padding-top: 4px;
+  width: 53rem;
   padding-bottom: 4px;
   padding-left: 10px;
   font-size: large;
@@ -167,15 +178,16 @@ h2 {
   background-color: #F9F9F9;
   padding: 1rem;
   border-radius: 10px;
+  width: 66%;
 }
 
 .messages .message1 {
   background-color: white;
   padding: 2rem;
   border-radius: 8px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
+  margin-left: 0px;
+  margin-right: initial;
+  margin-top: initial;
   margin-bottom: 20px;
 }
 
@@ -259,8 +271,8 @@ h2 {
   background-color: white;
   padding: 2rem;
   border-radius: 8px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 0px;
+  width: 100%;
 }
 
 .messages .message2 .user {
@@ -339,9 +351,37 @@ h2 {
   border: solid #8F8F8F 1px;
 }
 
+.BlocDroit {
+  background-color: green;
+  width: 30%;
+  float: right;
+  height: 66rem;
+}
+
+.BlocDroit .BlocDroitLogin {
+  margin-top: 10px;
+}
+
+.BlocDroit .BlocDroitLogin #BlocDroitSearch {
+  border-radius: 30px;
+  margin-left: 10px;
+  border: none;
+}
+
+.BlocDroit .BlocDroitLogin button {
+  border: none;
+  background-color: #F7F7F7;
+  height: 20px;
+  border-radius: 30px;
+  height: 26px;
+  width: 50px;
+  color: #989898;
+}
+
 .btnMessageEnd {
   margin-top: 20px;
   margin-bottom: 30px;
+  margin-top: 61rem;
 }
 
 .btnMessageEnd .reply {
@@ -374,7 +414,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .pathEnd a {
@@ -397,7 +437,7 @@ h2 {
 footer .logos {
   background: -webkit-gradient(linear, left top, right top, from(#ae6ab3), to(#4868dc));
   background: linear-gradient(90deg, #ae6ab3, #4868dc);
-  height: 215px;
+  height: 160px;
 }
 
 footer .logos ul {
@@ -408,7 +448,8 @@ footer .logos ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px;
+  padding: 68px;
+  margin-top: 80rem;
 }
 
 footer .logos ul li {

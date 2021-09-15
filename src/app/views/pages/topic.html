@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300,400,500,600,800&display=swap" rel="stylesheet">
     <title>Topic</title>
+    
 </head>
 <body>
     <header>
@@ -18,6 +19,7 @@
             <a href="#"><i class="far fa-edit"></i> Register</a>
             <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
         </div>
+        
 <h1>The forum</h1>
 
     </header>
@@ -30,6 +32,65 @@
                 <li><a href="#">  < Topics </a></li>
             </ul>
         </div>
+
+
+        <div class="BlocDroit">
+            <div class="BlocDroitLogin">
+                <input type="search" id="BlocDroitSearch" name="q" placeholder="Search...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                    <button class="btnParam"><i class="fas fa-cog"></i></button>
+                <div class="BlocDroitLigneUn"></div>
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+                <div class="BlocDroitLigneDeux"></div>
+                <form>
+                    <label>Username:</label>
+                    <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+                    <label>Password</label>
+                    <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+                    <input type="submit" id='submit' value='LOGIN'>
+                    <input type="checkbox" id="remember" name="rememberMe">
+                    <label for="remember">Remember me</label>
+                </form>
+                <button class="BlocDroitButtonLogin">Login</button>
+                <div class="BlocDroitLigneTrois"></div>
+                <p>I forgot my password</p>
+            </div>
+            <div class="lastPost">
+                <div class="lastpostcolor">
+                    <h3>Last Posts</h3>
+                </div>
+                <div class="BlocDroitArticle">
+                    <article class="article">
+                        <h3 class="lastPostTitre"></h3>
+                        <p class="lastPostHours"></p>
+                        <p class="lastPostText"></p>
+                        <p class="lastPostTags"></p>
+                    </article>
+                </div>
+                <div class="lastActiveUser">
+                    <div class="lastActiveUserColor">
+                        <h3 class="lastActiveUserTitle">Last active user</h3>
+                    </div>
+                    <div class="blocArticleUser">
+                        <article class="articleUser">
+                            <img src="" alt="" />
+                            <div class="lastActiveUserText">
+                                <h4 class="nameUser"></h4>
+                                <p class="shortDescription">
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
 
         <h2>Titre du topic</h2>
 
@@ -83,9 +144,12 @@
                     <p class="signatureMessage">Sign</p>
                 </div>
                 <div class="col-md-1 quote"><i class="fas fa-quote-left"></i></div>
+
             </div>
         </article>
 
+
+        
         <div class="btnMessageEnd">
             <button class="reply"> Post reply <i class="fas fa-reply"></i></button>
             <button class="tool"> <i class="fas fa-wrench"></i> <i class="fas fa-sort-down"></i></button>
@@ -132,6 +196,8 @@
             <a class="btn-up" href="#top"><i class="fas fa-arrow-up"></i></a>
         </div>
         </footer>
-        
+    </style>
+ 
+   
 </body>
 </html>

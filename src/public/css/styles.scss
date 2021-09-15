@@ -1,9 +1,9 @@
 
 
+//HEADER
 header{
     background: -webkit-linear-gradient(90deg, rgb(174, 106, 179), rgb(72, 104, 220));
     background: linear-gradient(90deg, rgb(174, 106, 179), rgb(72, 104, 220));
-    opacity: 0.6;
    
     text-align: center;
     height: 20rem;
@@ -34,17 +34,29 @@ header{
 body{
     margin: 0;
     padding: 0;
+    background-color: #F9F9F9;
     box-sizing: border-box;
+    
 }
 
-
+//MAIN
 .container-fluid{
+    z-index: 2;
+    position: absolute;
+    margin: -77px 20px 0 20px;
+    border-radius: 10px;
+    background-color: white;
+    padding-top: 0px;
+    width: 96%;
     .path{
         ul{
         list-style: none;
         display: flex;
         justify-content: left;
-        font-family: 'Rubik', sans-serif;
+        padding: 20px 0px 0px 0px;
+       
+        
+
             a{
                 text-decoration: none;
                 color: #6A6A6A;
@@ -61,6 +73,8 @@ h2{
     padding-left: 30px;
 }
 
+
+//RULES
 .rules{
     background-color: #ECD5D9;
     margin-left: 30px;
@@ -69,6 +83,7 @@ h2{
     color: #6A6A6A;
     text-align: left;
     padding-top: 4px;
+    width: 53rem;
     padding-bottom: 4px;
     padding-left: 10px;
     font-size: large;
@@ -77,6 +92,8 @@ h2{
     font-family: 'Rubik', sans-serif;
 }
 
+
+//SEARCH BAR + BTN
 .btnMessages{
     font-family: 'Rubik', sans-serif;
     display: flex;
@@ -150,19 +167,24 @@ h2{
         }
 }
 
+
+//MESSAGES BLOCK
 .messages{
     font-family: 'Rubik', sans-serif;
     margin-top: 20px;
     background-color: #F9F9F9;
     padding: 1rem;
     border-radius: 10px;
+    width: 66%;
+
+//DETAILS OF ONE MESSAGE
     .message1{
         background-color: white;
         padding: 2rem;
         border-radius: 8px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 20px;
+        margin-left: 0px;
+        margin-right: initial;
+        margin-top: initial;
         margin-bottom: 20px;
         .user{
             display: flex;
@@ -223,12 +245,16 @@ h2{
         }
     }
 
+
+
+
+//DETAILS OF A SECOND MESSAGE
     .message2{
         background-color: white;
         padding: 2rem;
         border-radius: 8px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 0px;
+        width: 100%;
         .user{
             display: flex;
             justify-content: center;
@@ -290,9 +316,40 @@ h2{
     }
 }
 
+
+
+//RIGHT BLOC
+.BlocDroit{
+    background-color: green;
+    width: 30%;
+    float: right;
+    height: 66rem;
+    .BlocDroitLogin{
+        margin-top: 10px;
+        #BlocDroitSearch{
+            border-radius: 30px;
+            margin-left: 10px;
+            border: none;
+        }
+        button{
+            border:none;
+            background-color: #F7F7F7;
+            height: 20px;
+            border-radius: 30px;
+            height: 26px;
+            width: 50px;
+            color: #989898;
+        }
+    }
+}
+
+
+
+//BTN END
 .btnMessageEnd{
     margin-top: 20px;
     margin-bottom: 30px;
+    margin-top: 61rem;
     .reply{
     font-weight: bold;
     color: white;
@@ -319,7 +376,7 @@ h2{
 .pathEnd{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     a{
         text-decoration: none;
         color: #6A6A6A;
@@ -338,16 +395,18 @@ h2{
 }
 
 
+//FOOTER
 footer{
     .logos{
         background: -webkit-linear-gradient(90deg, rgb(174, 106, 179), rgb(72, 104, 220));
         background: linear-gradient(90deg, rgb(174, 106, 179), rgb(72, 104, 220));
-        height: 215px;
+        height: 160px;
         ul{
         list-style: none;
         display: flex;
         justify-content: center;
-        padding: 50px;
+        padding: 68px;
+        margin-top: 80rem;
             li{
                 padding: 10px;
                 font-size: 40px;
@@ -398,6 +457,4 @@ footer{
         }
     }
 
-    
-    
 }
