@@ -7,26 +7,21 @@ class Pages extends Controller {
 
     public function index() {
         $boards = $this->boardModel->getBoards();
-        $sumTopics = $this->boardModel->sumTopics($boards);
-        $sumPosts = $this->boardModel->sumPosts($boards);
-        $lastPost = $this->boardModel->lastPostDate($boards);
+        $sumTopics = $this->boardModel->sumTopics();
+        $sumPosts = $this->boardModel->sumPosts();
+        $lastPost = $this->boardModel->lastPostDate();
+     
 
         $data = [
           'boards' => $boards,
           'sumTopics' => $sumTopics,
           'sumPosts' => $sumPosts,
           'lastPost' => $lastPost
-        ];
-
-        //foreach ($result as $a => $a value){
-            //$boardid = $_GET['id'];
-            //$arrayOfResult = (array)$result[$a];
-            //$this->db->query ...  
-            //$messages => single()
-        //}
-
+         ];
         $this->view('pages/index', $data);
     }
+
+  
 
 
 

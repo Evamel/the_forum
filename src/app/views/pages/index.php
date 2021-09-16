@@ -26,10 +26,8 @@ require APPROOT . '/views/includes/right.php';
     <?php foreach($data['boards'] as $key => $board):?>
     <?php 
     $topicsCount =$data['sumTopics'][$key];
+    $messagesCount =$data['sumPosts'][$key];
     echo "<pre style='color:black'>";
-    var_dump($topicsCount);
-    echo $topicsCount->topicTotal . '<br>';
-    var_dump($data['sumPosts'][$key]);
     var_dump($data['lastPost'][$key]);
     echo "</pre>" ;
     ?>
@@ -52,12 +50,16 @@ require APPROOT . '/views/includes/right.php';
 
                  <div id="container-infos">  
                  <p>
-                 <?php echo $board->topicTotal;?>
+                 <?php  echo 'Topics: ' . $topicsCount->topicTotal . '<br>';?>
                  </p>
-                 <br>    
-                  <?php echo $messages->total;?>
+                 <br> 
+                 <p>  
+                  <?php echo 'Messages: ' . $messagesCount->messageTotal . '<br>';?>
+                  </p> 
                  <br>
+                 <p>
                  <?php echo 'last post: ' . date('F j h:m', strtotime($board->board_id)) ?>
+                 </p>
                  <br>
                  </div>
                  </div>
