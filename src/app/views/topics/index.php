@@ -11,8 +11,8 @@ require APPROOT . '/views/includes/head.php';
 //var_dump($_GET['id']);  
 ?>
 <?php 
-//var_dump($data['topics']);  
-//var_dump(str_split($_GET['id']));
+print_r($data['topics']);  
+
 ?>
 
 
@@ -37,6 +37,7 @@ require APPROOT . '/views/includes/right.php';
     <?php 
     $messagesCount =$data['messages'][$key];
     $lastMessage =$data['lastMessage'][$key];
+    $topicAutor =$data['topicAutor'][$key];
     ?>
   
     <div id="container-item">
@@ -49,13 +50,13 @@ require APPROOT . '/views/includes/right.php';
        
 
                  <div id="container-user">  
-                 <?php echo 'Topic by: ' . $messages->user_name;?>
+                 <?php echo 'Topic by: ' . $topicAutor->user_name;?>
                  <br>
-                 <?php echo 'Total messages: ' . $messagesCount->total;?>
+                 <?php echo 'Total messages: ' . $messages->count;?>
                  <br>    
                
                  <h5>
-                  <?php echo 'last message by: ' . $lastMessage->user_name . '<br> posted on: ' . date('F j h:m', strtotime($lastMessage->message_date)) ?>
+                  <?php echo 'last message by: ' . $messages->user_name . '<br> posted on: ' . date('F j h:m', strtotime($messages->message_date)) ?>
                  </h5>
                  </div>
                 

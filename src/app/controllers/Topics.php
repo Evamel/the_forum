@@ -8,14 +8,14 @@ class Topics extends Controller{
     public function index() {
        
         $topics = $this->topicModel->findAllTopics();
-        $messages = $this->topicModel->messagesByTopic();
         $lastMessage =$this->topicModel->lastMessage();
+        $topicAutor =$this->topicModel->findTopicAutor();
    
 
         $data = [
           'topics' => $topics,
-          'messages' => $messages,
-          'lastMessage' =>$lastMessage
+          'lastMessage' =>$lastMessage,
+          'topicAutor' =>$topicAutor
         ];
    
 

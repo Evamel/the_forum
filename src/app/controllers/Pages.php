@@ -9,14 +9,21 @@ class Pages extends Controller {
         $boards = $this->boardModel->getBoards();
         $sumTopics = $this->boardModel->sumTopics();
         $sumPosts = $this->boardModel->sumPosts();
-        $lastPostDate = $this->boardModel->lastPostDate();
+
+
+        $lastMessages = [];
+
+        foreach($boards as $board){
+            array_push($lastMessages,$this->boardModel->lastPost($board->board_id)); 
+        }
+
      
 
         $data = [
           'boards' => $boards,
           'sumTopics' => $sumTopics,
           'sumPosts' => $sumPosts,
-          'lastPostDate' => $lastPostDate
+          'lastMessages' => $lastMessages
          ];
         $this->view('pages/index', $data);
     }

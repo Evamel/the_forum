@@ -7,7 +7,7 @@ require APPROOT . '/views/includes/head.php';
 <?php
 echo "<pre style='color:black'>";
 //var_dump($_SESSION);  
-print_r($data);  
+//print_r($data);  
 echo "</pre>" ;
 ?>
 
@@ -27,8 +27,16 @@ require APPROOT . '/views/includes/right.php';
     <?php 
     $topicsCount =$data['sumTopics'][$key];
     $messagesCount =$data['sumPosts'][$key];
-    $lastMessages =$data['lastPostDate'][$key];
+    $lastMessage =$data['lastMessages'][$key];
+  
+    
+    foreach($lastMessage as $message){
+        echo $message->message_date.'<br>';
+    }
     ?>
+    
+
+    
     
     <div id="container-item">
     
@@ -56,17 +64,20 @@ require APPROOT . '/views/includes/right.php';
                   </p> 
 
                  <p>
-                 <?php echo 'last post: ' . date('F j h:m', strtotime($lastMessages->message_date)) . '   by: ' . $lastMessages->user_name ?>
+                 <?php echo 'last post: ' . date('F j h:m', strtotime($lastMessage->message_date))  ?>
                  </p>
                  <br>
                  </div>
-                 </div>
+            </div>
+
+            
+
       <?php endforeach;?>
 
     
 
 
-</div>
+    </div>
 
 <?php
 require APPROOT . '/views/includes/footer.php';
