@@ -1,0 +1,116 @@
+@mixin purpleBtn{
+    font-weight: bold;
+            color: white;
+            background-color: #B06AB3;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            height: 40px;
+}
+
+@mixin toolBtn{
+    font-weight: bold;
+            color: #909090;
+            background-color: #F7F7F7;
+            border: none;
+            padding: 8px;
+            margin-left: 10px;
+            border-radius: 10px;
+            width: 70px;
+            height: 40px;
+}
+
+
+//BTN TOP
+.btnMessages{
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+        .reply{
+            @include purpleBtn();
+        }
+        .tool{
+            @include toolBtn();
+        }
+        .searchbarMessage{
+            font-weight: bold;
+            color: white;
+            background-color: #F7F7F7;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            width: 22rem;
+            height: 40px;
+            text-align: center;
+            input{
+                border:none;
+                background-color: #F7F7F7;
+            }
+            button{
+                border:none;
+                background-color: #F7F7F7;
+                height: 20px;
+                
+            }
+            .fa{
+            font-weight: bold;
+            color: #909090;
+            background-color: #F7F7F7;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            width: auto;
+            height: 40px;
+            }
+            .fas{
+            font-weight: bold;
+            color: #909090;
+            background-color: #F7F7F7;
+            border: none;
+            padding: 8px;
+            width: auto;
+            height: 40px;
+            }
+        }
+}
+
+
+
+
+//BTN END
+.btnMessageEnd{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-top: 61rem;
+    .reply{
+    @include purpleBtn();
+    }
+    .tool{
+    @include toolBtn();
+    }
+}
+
+.pathEnd{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    a{
+        text-decoration: none;
+        color: #6A6A6A;
+        padding: 5px;
+    }
+    #jumpTo{
+        font-weight: bold;
+            color: #909090;
+            background-color: #F7F7F7;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            width: 130px;
+            height: 40px;
+    }
+}

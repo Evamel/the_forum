@@ -33,65 +33,6 @@ header .log a {
   font-weight: 400;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #F9F9F9;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.container-fluid {
-  z-index: 2;
-  position: absolute;
-  margin: -77px 20px 0 20px;
-  border-radius: 10px;
-  background-color: white;
-  padding-top: 0px;
-  width: 96%;
-}
-
-.container-fluid .path ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  padding: 20px 0px 0px 0px;
-}
-
-.container-fluid .path ul a {
-  text-decoration: none;
-  color: #6A6A6A;
-  padding: 5px;
-}
-
-h2 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: lighter;
-  color: #6A6A6A;
-  padding-left: 30px;
-}
-
-.rules {
-  background-color: #ECD5D9;
-  margin-left: 30px;
-  border-left: solid 3px #BE3853;
-  border-radius: 5px;
-  color: #6A6A6A;
-  text-align: left;
-  padding-top: 4px;
-  width: 53rem;
-  padding-bottom: 4px;
-  padding-left: 10px;
-  font-size: large;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-family: 'Rubik', sans-serif;
-}
-
 .btnMessages {
   font-family: 'Rubik', sans-serif;
   display: -webkit-box;
@@ -172,183 +113,61 @@ h2 {
   height: 40px;
 }
 
-.messages {
-  font-family: 'Rubik', sans-serif;
+.btnMessageEnd {
   margin-top: 20px;
-  background-color: #F9F9F9;
-  padding: 1rem;
+  margin-bottom: 30px;
+  margin-top: 61rem;
+}
+
+.btnMessageEnd .reply {
+  font-weight: bold;
+  color: white;
+  background-color: #B06AB3;
+  border: none;
+  padding: 8px;
   border-radius: 10px;
-  width: 66%;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 40px;
 }
 
-.messages .message1 {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-left: 0px;
-  margin-right: initial;
-  margin-top: initial;
-  margin-bottom: 20px;
+.btnMessageEnd .tool {
+  font-weight: bold;
+  color: #909090;
+  background-color: #F7F7F7;
+  border: none;
+  padding: 8px;
+  margin-left: 10px;
+  border-radius: 10px;
+  width: 70px;
+  height: 40px;
 }
 
-.messages .message1 .user {
+.pathEnd {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 35px;
 }
 
-.messages .message1 .user .avatar {
-  border-radius: 100px;
-  margin-bottom: 2rem;
-  width: 140px;
+.pathEnd a {
+  text-decoration: none;
+  color: #6A6A6A;
+  padding: 5px;
 }
 
-.messages .message1 .user .pseudo {
-  color: #AB2819;
-  font-weight: bolder;
-}
-
-.messages .message1 .user .level {
-  color: gray;
-}
-
-.messages .message1 .user .numberOfPosts {
-  color: black;
+.pathEnd #jumpTo {
   font-weight: bold;
-}
-
-.messages .message1 .user .numberOfPosts .num {
-  color: gray;
-  font-weight: bold;
-}
-
-.messages .message1 .detailsMessage .date {
-  color: gray;
-  font-weight: 600;
-}
-
-.messages .message1 .detailsMessage .hour {
-  color: gray;
-  font-weight: 600;
-}
-
-.messages .message1 .detailsMessage .textMessage {
-  color: black;
-}
-
-.messages .message1 .detailsMessage .lineMessSign {
-  border-top: solid #D9DCDF 1px;
-}
-
-.messages .message1 .detailsMessage .signatureMessage {
-  color: black;
-  padding-top: 20px;
-}
-
-.messages .message1 .quote {
+  color: #909090;
   background-color: #F7F7F7;
-  color: #8F8F8F;
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  text-align: center;
-  padding-top: 12px;
-  border: solid #8F8F8F 1px;
-}
-
-.messages .message2 {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-left: 0px;
-  width: 100%;
-}
-
-.messages .message2 .user {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
-.messages .message2 .user .avatar {
-  border-radius: 100px;
-  margin-bottom: 2rem;
-  width: 140px;
-}
-
-.messages .message2 .user .pseudo {
-  color: #AB2819;
-  font-weight: bolder;
-}
-
-.messages .message2 .user .level {
-  color: gray;
-}
-
-.messages .message2 .user .numberOfPosts {
-  color: black;
-  font-weight: bold;
-}
-
-.messages .message2 .user .numberOfPosts .num {
-  color: gray;
-  font-weight: bold;
-}
-
-.messages .message2 .detailsMessage .date {
-  color: gray;
-  font-weight: 600;
-}
-
-.messages .message2 .detailsMessage .hour {
-  color: gray;
-  font-weight: 600;
-}
-
-.messages .message2 .detailsMessage .textMessage {
-  color: black;
-}
-
-.messages .message2 .detailsMessage .lineMessSign {
-  border-top: solid #D9DCDF 1px;
-}
-
-.messages .message2 .detailsMessage .signatureMessage {
-  padding-top: 20px;
-  color: black;
-}
-
-.messages .message2 .quote {
-  background-color: #F7F7F7;
-  color: #8F8F8F;
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  text-align: center;
-  padding-top: 12px;
-  border: solid #8F8F8F 1px;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
 }
 
 .searchBarreBlocDroitLogin {
@@ -510,62 +329,6 @@ h2 {
   margin-top: 10px;
 }
 
-.btnMessageEnd {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  margin-top: 61rem;
-}
-
-.btnMessageEnd .reply {
-  font-weight: bold;
-  color: white;
-  background-color: #B06AB3;
-  border: none;
-  padding: 8px;
-  border-radius: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  height: 40px;
-}
-
-.btnMessageEnd .tool {
-  font-weight: bold;
-  color: #909090;
-  background-color: #F7F7F7;
-  border: none;
-  padding: 8px;
-  border-radius: 10px;
-  width: 70px;
-  height: 40px;
-}
-
-.pathEnd {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 35px;
-}
-
-.pathEnd a {
-  text-decoration: none;
-  color: #6A6A6A;
-  padding: 5px;
-}
-
-.pathEnd #jumpTo {
-  font-weight: bold;
-  color: #909090;
-  background-color: #F7F7F7;
-  border: none;
-  padding: 10px;
-  border-radius: 20px;
-  width: 130px;
-  height: 40px;
-}
-
 footer .logos {
   background: -webkit-gradient(linear, left top, right top, from(#ae6ab3), to(#4868dc));
   background: linear-gradient(90deg, #ae6ab3, #4868dc);
@@ -645,5 +408,159 @@ footer .lastLine .btn-up {
 
 footer .lastLine .btn-up .fas {
   padding: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F9F9F9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-fluid {
+  z-index: 2;
+  position: absolute;
+  margin: -77px 20px 0 20px;
+  border-radius: 10px;
+  background-color: white;
+  padding-top: 0px;
+  width: 96%;
+}
+
+.container-fluid .path ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 20px 0px 0px 0px;
+}
+
+.container-fluid .path ul a {
+  text-decoration: none;
+  color: #6A6A6A;
+  padding: 5px;
+}
+
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: lighter;
+  color: #6A6A6A;
+  padding-left: 30px;
+}
+
+.rules {
+  background-color: #ECD5D9;
+  margin-left: 30px;
+  border-left: solid 3px #BE3853;
+  border-radius: 5px;
+  color: #6A6A6A;
+  text-align: left;
+  padding-top: 4px;
+  width: 53rem;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  font-size: large;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.messages {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 20px;
+  background-color: #F9F9F9;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 66%;
+}
+
+.messages .message1, .messages .message2 {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-left: 0px;
+  margin-right: initial;
+  margin-top: initial;
+  margin-bottom: 20px;
+}
+
+.messages .message1 .user, .messages .message2 .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.messages .message1 .user .avatar, .messages .message2 .user .avatar {
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  width: 140px;
+}
+
+.messages .message1 .user .pseudo, .messages .message2 .user .pseudo {
+  color: #AB2819;
+  font-weight: bolder;
+}
+
+.messages .message1 .user .level, .messages .message2 .user .level {
+  color: gray;
+}
+
+.messages .message1 .user .numberOfPosts, .messages .message2 .user .numberOfPosts {
+  color: black;
+  font-weight: bold;
+}
+
+.messages .message1 .user .numberOfPosts .num, .messages .message2 .user .numberOfPosts .num {
+  color: gray;
+  font-weight: bold;
+}
+
+.messages .message1 .detailsMessage .date, .messages .message2 .detailsMessage .date {
+  color: gray;
+  font-weight: 600;
+}
+
+.messages .message1 .detailsMessage .hour, .messages .message2 .detailsMessage .hour {
+  color: gray;
+  font-weight: 600;
+}
+
+.messages .message1 .detailsMessage .textMessage, .messages .message2 .detailsMessage .textMessage {
+  color: black;
+}
+
+.messages .message1 .detailsMessage .lineMessSign, .messages .message2 .detailsMessage .lineMessSign {
+  border-top: solid #D9DCDF 1px;
+}
+
+.messages .message1 .detailsMessage .signatureMessage, .messages .message2 .detailsMessage .signatureMessage {
+  color: black;
+  padding-top: 20px;
+}
+
+.messages .message1 .quote, .messages .message2 .quote {
+  background-color: #F7F7F7;
+  color: #8F8F8F;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  text-align: center;
+  padding-top: 12px;
+  border: solid #8F8F8F 1px;
 }
 /*# sourceMappingURL=styles.css.map */
