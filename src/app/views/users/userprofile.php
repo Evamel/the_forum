@@ -27,13 +27,20 @@ require APPROOT . '/views/includes/head.php';
     $avatar = "https://www.gravatar.com/avatar/" . md5($_SESSION['email']) . "?s=64&d=mp";
     ?>
     <img src="<?php echo $avatar; ?>" alt="avatar" />
-    <?php
-    echo "<ul><li>" . $_SESSION['username'] . "</li>";
-    echo "<li>" . $_SESSION['email'] . "</li>";
-    echo "<li>" . date_format($date, 'd/m/y') . "</li>";
-    echo "<li>" . $_SESSION['signature'] . "</li>";
-    echo "<li>" . ($_SESSION['level'] == 2 ? 'Admin' : 'Member') . "</li></ul>";
-    ?> <p class="edit">
+    <ul>
+        <li><?php echo $_SESSION['username'] ?></li>
+        <li><?php echo $_SESSION['email'] ?></li>
+        <li><?php echo date_format($date, 'd/m/y') ?></li>
+        <li><?php echo $_SESSION['signature'] ?></li>
+        <li><?php if ($_SESSION['level'] == 1) {
+                echo 'Member';
+            } else if ($_SESSION == 2) {
+                echo 'Moderator';
+            } else if ($_SESSION == 3) {
+                echo 'Administrator';
+            } ?></li>
+    </ul>
+    <p class="edit">
         <a href="<?php echo URLROOT; ?>/users/editprofile">Edit your account</a>
     </p>
     <?php

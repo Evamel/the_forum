@@ -1,144 +1,148 @@
 <?php
-class Messages extends Controller{
-    public function __construct(){
-       $this->messageModel = $this->model('Message'); 
-      
-    }
-
-    static function getTopicId(){
-      return $_GET['id'];
-    }
-
-
-    public function index() {
-        $messages = $this->messageModel->findAllMessages();
-
-
-        $data = [
-          'messages' => $messages,
-       
-        ];
-
-        $this->view('messages/index', $data);
-    }
-
-
-
-    public function answer(){
-       $id= $_GET['id'];
-       if (!isLoggedIn()){
-        header("Location:" . URLROOT . "/messages/index?id=". $_GET['id']);
-       }
-
-      $data =[
-        'topic_id' => $id,
-         'user_id' =>$_SESSION['user_id'],
-         'content' =>'',
-         'contentError' => '',
-      ];
-
-      if($_SERVER['REQUEST_METHOD'] == 'POST'){
-          $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
-          $data =[
-            'topic_id' => $id,
-            'user_id' =>$_SESSION['user_id'],
-            'content' =>trim($_POST['content']),
-            'contentError' => '',
-         ];
-       if(empty($data['content'])){
-           $data['contentError'] = 'your post is empty';
-       }
-       if(empty($data['contentError'])){
-        if($this->messageModel->addMessage($data)){
-            header("Location:" . URLROOT . "/messages/index?id=". $_GET['id']);
-        } else {
-            die("Something mew wrong, try again");
-        }
-    }else {
-        $this->view('messages/answer', $data);
-    }
-      }
-      $this->view('messages/answer', $data);
-    }
-
-
-
-
-
-    public function update($id) {
-        
-        $message =$this->messageModel->findMessageById($id);
-
-       if(!isLoggedIn()){
-        header("Location:" . URLROOT . "/messages/index?id=". $_GET['id']);
-       } elseif($message->user_id !=$_SESSION['user_id']) {
-        header("Location:" . URLROOT . "/messages/index?id=". $_GET['id']);
-       }
-
-    
-      $data =[
-        
-        'message' => $message,
-        'content' =>'',
-        'contentError' => '',
-
-     ];
-
-     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
-        $data =[
-          'id' => $id,
-          'message' => $message,
-          'user_id' =>$_SESSION['user_id'],
-          'content' =>trim($_POST['content']),
-          'contentError' => '',
-       ];
-     if(empty($data['content'])){
-         $data['contentError'] = 'your post is empty';
-     }
-     if(empty($data['contentError'])){
-      if($this->messageModel->updateMessage($data)){
-          header("Location:" . URLROOT . "/messages/index.php?id=" . $message->topic_id);
-      } else {
-          die("Something mew wrong, try again");
-      }
-  }else {
-      $this->view('messages/update', $data);
+class Messages extends Controller
+{
+  public function __construct()
+  {
+    $this->messageModel = $this->model('Message');
   }
+
+  static function getTopicId()
+  {
+    return $_GET['id'];
+  }
+
+
+  public function index()
+  {
+    $messages = $this->messageModel->findAllMessages();
+
+
+    $data = [
+      'messages' => $messages,
+
+    ];
+
+    $this->view('messages/index', $data);
+  }
+
+
+
+  public function answer()
+  {
+    $id = $_GET['id'];
+    if (!isLoggedIn()) {
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
+    }
+
+    $data = [
+      'topic_id' => $id,
+      'user_id' => $_SESSION['user_id'],
+      'content' => '',
+      'contentError' => '',
+    ];
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+      $data = [
+        'topic_id' => $id,
+        'user_id' => $_SESSION['user_id'],
+        'content' => trim($_POST['content']),
+        'contentError' => '',
+      ];
+      if (empty($data['content'])) {
+        $data['contentError'] = 'your post is empty';
+      }
+      if (empty($data['contentError'])) {
+        if ($this->messageModel->addMessage($data)) {
+          header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
+        } else {
+          die("Something mew wrong, try again");
+        }
+      } else {
+        $this->view('messages/answer', $data);
+      }
+    }
+    $this->view('messages/answer', $data);
+  }
+
+
+
+
+
+  public function update($id)
+  {
+
+    $message = $this->messageModel->findMessageById($id);
+
+    if (!isLoggedIn()) {
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
+    } elseif ($message->user_id != $_SESSION['user_id']) {
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
+    }
+
+
+    $data = [
+
+      'message' => $message,
+      'content' => '',
+      'contentError' => '',
+
+    ];
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+      $data = [
+        'id' => $id,
+        'message' => $message,
+        'user_id' => $_SESSION['user_id'],
+        'content' => trim($_POST['content']),
+        'contentError' => '',
+      ];
+      if (empty($data['content'])) {
+        $data['contentError'] = 'your post is empty';
+      }
+      if (empty($data['contentError'])) {
+        if ($this->messageModel->updateMessage($data)) {
+          header("Location:" . URLROOT . "/messages/index.php?id=" . $message->topic_id);
+        } else {
+          die("Something mew wrong, try again");
+        }
+      } else {
+        $this->view('messages/update', $data);
+      }
     }
     $this->view('messages/update', $data);
   }
-     
 
 
 
-    public function delete($id){
-        $message =$this->messageModel->findMessageById($id);
 
-        if(!isLoggedIn()){
-          header("Location:" . URLROOT . "/messages/index?id=". $_GET['id']);
-        } elseif($message->user_id !=$_SESSION['user_id']) {
-          header("Location:" . URLROOT . "/messages/index?id=". $_GET['id']);
-        }
- 
-     
-       $data =[
-        'message' => $message,
-        'content' =>'',
-        'contentError' => '',
- 
-      ];
+  public function delete($id)
+  {
+    $message = $this->messageModel->findMessageById($id);
 
-      if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
-        
-        if($this->messageModel->deleteMessage($id)){
-            header("Location:" . URLROOT . "/messages/index.php?id=" . $message->topic_id);
-        } else {
-           die('Something went wrong');
-        }
+    if (!isLoggedIn()) {
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
+    } elseif ($message->user_id != $_SESSION['user_id']) {
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
     }
 
-    }
 
+    $data = [
+      'message' => $message,
+      'content' => '',
+      'contentError' => '',
+
+    ];
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+      if ($this->messageModel->deleteMessage($id)) {
+        header("Location:" . URLROOT . "/messages/index.php?id=" . $message->topic_id);
+      } else {
+        die('Something went wrong');
+      }
+    }
+  }
 }

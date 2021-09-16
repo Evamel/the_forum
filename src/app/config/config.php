@@ -9,11 +9,10 @@ define("DB_NAME", "CyberCats");
 define("DB_CHARSET", "utf8");
 
 //AppROOT
-define ('APPROOT',dirname(dirname(__FILE__)));
+define('APPROOT', dirname(dirname(__FILE__)));
 
 //URLROOT (Dynamic links)
 define('URLROOT', 'http://localhost');
 
 //Sitename
 define('SITENAME', 'The Forum');
-

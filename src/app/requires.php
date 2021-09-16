@@ -6,6 +6,4 @@ require_once 'libraries/database.php';
 require_once 'helpers/session_helper.php';
 require_once 'config/config.php';
 
-$init = new Core(); 
-?>
-
+$init = new Core();
