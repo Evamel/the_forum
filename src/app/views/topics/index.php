@@ -11,7 +11,7 @@ require APPROOT . '/views/includes/head.php';
 //var_dump($_GET['id']);  
 ?>
 <?php 
-print_r($data['topics']);  
+//print_r($data['topics']);  
 
 ?>
 

@@ -4,7 +4,7 @@ require APPROOT . '/views/includes/head.php';
 
 <div id="section-landing">
 <?php 
-var_dump($_SESSION);  
+//var_dump($_SESSION);  
 ?> 
 <?php
 require APPROOT . '/views/includes/navigation.php';
