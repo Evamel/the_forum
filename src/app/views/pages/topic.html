@@ -36,34 +36,37 @@
 
         <div class="BlocDroit">
             <div class="BlocDroitLogin">
-                <input type="search" id="BlocDroitSearch" name="q" placeholder="Search...">
-                <button type="submit"><i class="fa fa-search"></i></button>
-                    <button class="btnParam"><i class="fas fa-cog"></i></button>
+                <div class="searchBarreBlocDroitLogin">
+                    <input type="search" id="BlocDroitSearch" name="q" placeholder="Search...">
+                    <button id="btnUn" type="submit"><i class="fa fa-search"></i></button>
+                    <button id="btnDeux" class="btnParam"><i class="fas fa-cog"></i></button>
+                </div>
+                <div class="ligneColorLog"></div>
                 <div class="BlocDroitLigneUn"></div>
-                <ul>
+                <ul class="loginRegister">
                     <li><a href="#">Login</a></li>
+                    <li class="point">.</li>
                     <li><a href="#">Register</a></li>
                 </ul>
                 <div class="BlocDroitLigneDeux"></div>
-                <form>
-                    <label>Username:</label>
-                    <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
-                    <label>Password</label>
-                    <input type="password" placeholder="Entrer le mot de passe" name="password" required>
-                    <input type="submit" id='submit' value='LOGIN'>
-                    <input type="checkbox" id="remember" name="rememberMe">
-                    <label for="remember">Remember me</label>
+                <form class="log">
+                    <label>Username :</label>
+                    <input class="Username" type="text" placeholder="Enter the username" name="username" required>
+                    <label class="password">Password :</label>
+                    <input class="Password" type="password" placeholder="Enter password" name="password" required>
+                    <input class="remember" type="checkbox" id="remember" name="rememberMe">
+                    <label class="remember" for="remember">Remember me</label>
+                    <input class="btnLogin" type="submit" id='submit' value='LOGIN'>
                 </form>
-                <button class="BlocDroitButtonLogin">Login</button>
-                <div class="BlocDroitLigneTrois"></div>
-                <p>I forgot my password</p>
+                <div class="BlocDroitLigneDeux"></div>
+                <p class="forgot">I forgot my password</p>
             </div>
             <div class="lastPost">
                 <div class="lastpostcolor">
-                    <h3>Last Posts</h3>
+                    <h3 class="lastPostTitle">Last Posts</h3>
                 </div>
                 <div class="BlocDroitArticle">
-                    <article class="article">
+                    <article class="articleLastPost">
                         <h3 class="lastPostTitre"></h3>
                         <p class="lastPostHours"></p>
                         <p class="lastPostText"></p>
