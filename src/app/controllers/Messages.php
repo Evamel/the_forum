@@ -6,24 +6,30 @@ class Messages extends Controller
     $this->messageModel = $this->model('Message');
   }
 
+  static function getTopicId()
+  {
+    return $_GET['id'];
+  }
+
   public function index()
   {
     $messages = $this->messageModel->findAllMessages();
 
     $data = [
-      'messages' => $messages
+      'messages' => $messages,
     ];
-
     $this->view('messages/index', $data);
   }
 
   public function answer()
   {
+    $id = $_GET['id'];
     if (!isLoggedIn()) {
-      header("Location:" . URLROOT . "/messages");
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
     }
 
     $data = [
+      'topic_id' => $id,
       'user_id' => $_SESSION['user_id'],
       'content' => '',
       'contentError' => '',
@@ -32,6 +38,7 @@ class Messages extends Controller
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
       $data = [
+        'topic_id' => $id,
         'user_id' => $_SESSION['user_id'],
         'content' => trim($_POST['content']),
         'contentError' => '',
@@ -41,7 +48,7 @@ class Messages extends Controller
       }
       if (empty($data['contentError'])) {
         if ($this->messageModel->addMessage($data)) {
-          header("Location:" . URLROOT . "/pages");
+          header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
         } else {
           die("Something mew wrong, try again");
         }
@@ -58,18 +65,15 @@ class Messages extends Controller
     $message = $this->messageModel->findMessageById($id);
 
     if (!isLoggedIn()) {
-      header("Location: " . URLROOT . "/messages");
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
     } elseif ($message->user_id != $_SESSION['user_id']) {
-      header("Location: " . URLROOT . "/messages");
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
     }
 
-
     $data = [
-
       'message' => $message,
       'content' => '',
       'contentError' => '',
-
     ];
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -102,9 +106,9 @@ class Messages extends Controller
     $message = $this->messageModel->findMessageById($id);
 
     if (!isLoggedIn()) {
-      header("Location: " . URLROOT . "/messages");
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
     } elseif ($message->user_id != $_SESSION['user_id']) {
-      header("Location: " . URLROOT . "/messages");
+      header("Location:" . URLROOT . "/messages/index?id=" . $_GET['id']);
     }
 
     $data = [

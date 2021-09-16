@@ -11,7 +11,7 @@ require APPROOT . '/views/includes/head.php';
 //var_dump($_GET['id']);  
 ?>
 <?php 
-//var_dump($data['messages']);  
+//print_r($data['messages']); 
 ?>
 
     <?php
@@ -48,17 +48,23 @@ require APPROOT . '/views/includes/head.php';
      <form action="<?php echo URLROOT . "/messages/delete/" . $message->message_id?>" method="POST">
     <input type="submit" name="delete" value="Delete" class ="btn red">
     </form>
+    <?php endif; ?>
     </div>
-      <?php endif; ?>
+    
     <?php endforeach;?>
    
-    </div>
 
-<?php if(isLoggedIn()): ?>
-     <a class="btn green" href="<?php echo URLROOT;?>/messages/answer">
-         NEW MESSAGE 
-     </a>
-    <?php endif ?>
+    <?php if(isLoggedIn()): ?>
+   
+   <a class="btn green" href="<?php echo URLROOT . "/messages/answer?id=" . $message->topic_id ?> ">
+       NEW MESSAGE 
+   </a>
+ 
+  <?php endif ?>
+
+
+</div>
+
 
     <?php
     require APPROOT . '/views/includes/footer.php';

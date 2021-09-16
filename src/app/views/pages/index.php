@@ -6,9 +6,11 @@ require APPROOT . '/views/includes/head.php';
 <<<<<<< HEAD
 =======
  
-<?php 
+<?php
+echo "<pre style='color:black'>";
 //var_dump($_SESSION);  
-var_dump($data);  
+print_r($data);  
+echo "</pre>" ;
 ?>
 >>>>>>> Lisa
 
@@ -37,7 +39,17 @@ var_dump($data);
 <div class ="container">
     
   
-    <?php foreach($data['boards'] as $board):?>
+    <?php foreach($data['boards'] as $key => $board):?>
+    <?php 
+    $topicsCount =$data['sumTopics'][$key];
+    echo "<pre style='color:black'>";
+    var_dump($topicsCount);
+    echo $topicsCount->topicTotal . '<br>';
+    var_dump($data['sumPosts'][$key]);
+    var_dump($data['lastPost'][$key]);
+    echo "</pre>" ;
+    ?>
+    
     <div id="container-item">
     
         <a href="<?php echo URLROOT . "/topics/index.php?id=" . $board->board_id ?>">
@@ -56,7 +68,7 @@ var_dump($data);
 
                  <div id="container-infos">  
                  <p>
-                 <?php echo $result->topicTotal;?>
+                 <?php echo $board->topicTotal;?>
                  </p>
                  <br>    
                   <?php echo $messages->total;?>

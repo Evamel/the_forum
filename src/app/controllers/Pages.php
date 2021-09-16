@@ -20,6 +20,13 @@ class Pages extends Controller
             'sumPosts' => $sumPosts,
             'lastPost' => $lastPost
         ];
+
+        //foreach ($result as $a => $a value){
+        //$boardid = $_GET['id'];
+        //$arrayOfResult = (array)$result[$a];
+        //$this->db->query ...  
+        //$messages => single()
+        //}
         $this->view('pages/index', $data);
     }
 
