@@ -33,7 +33,7 @@ class Board
      }
 
      public function lastPostDate(){
-      $this->db->query('SELECT boards.board_name, users.user_name, messages.message_date FROM users JOIN messages ON messages.user_id = users.user_id JOIN topics ON messages.topic_id = topics.topic_id JOIN boards ON topics.board_id = boards.board_id GROUP BY boards.board_name ORDER BY boards.board_id ASC;SELECT boards.board_name, users.user_name, messages.message_date FROM users JOIN messages ON messages.user_id = users.user_id JOIN topics ON messages.topic_id = topics.topic_id JOIN boards ON topics.board_id = boards.board_id GROUP BY boards.board_name ORDER BY boards.board_id, messages.message_date DESC;');
+      $this->db->query('SELECT boards.board_name, users.user_name, messages.message_date FROM users JOIN messages ON messages.user_id = users.user_id JOIN topics ON messages.topic_id = topics.topic_id JOIN boards ON topics.board_id = boards.board_id GROUP BY boards.board_name ORDER BY boards.board_id, messages.message_date ASC;');
       $results = $this->db->resultSet();
       return $results;
    }

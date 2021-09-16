@@ -8,7 +8,7 @@ class Topic {
 
     public function findAllTopics(){
        $getid = $_GET['id'];
-       $this->db->query('SELECT topics.topic_subject, topics.topic_id, topics.user_id, users.user_name FROM topics LEFT JOIN users ON topics.user_id = users.user_id WHERE board_id=:id ORDER BY topic_date ASC');
+       $this->db->query('SELECT topics.topic_subject, topics.topic_id, topics.user_id, users.user_name FROM topics LEFT JOIN users ON topics.user_id = users.user_id WHERE board_id=:id ORDER BY topic_id ASC');
       $this->db->bind(':id',$getid);
       $results = $this->db->resultSet();
         return $results;
@@ -16,14 +16,21 @@ class Topic {
      }
 
     public function messagesByTopic(){
-        $getid = $_GET['id'];
-        $this->db->query('SELECT COUNT(message_id) AS total,topic_subject,topic_date,user_name,topics.topic_id,topics.board_id,users.user_id FROM messages RIGHT OUTER JOIN topics ON messages.topic_id = topics.topic_id INNER JOIN users ON topics.user_id = users.user_id WHERE board_id=:id  GROUP BY topic_subject ORDER BY total ASC;');
-        $this->db->bind(':id',$getid);
+      $getid = $_GET['id'];
+        $this->db->query('SELECT COUNT(message_id) AS total,topic_subject,topic_date,topics.topic_id,topics.board_id FROM messages RIGHT OUTER JOIN topics ON messages.topic_id = topics.topic_id WHERE board_id=:id  GROUP BY topic_subject ORDER BY topic_id ASC;');
+        $this->db->bind(':id',$getid);       
         $results = $this->db->resultSet();
           return $results;
        
      }
 
+     public function lastMessage(){
+      $getid = $_GET['id'];
+          $this->db->query('SELECT topics.topic_subject, users.user_name, messages.message_date FROM users JOIN messages ON messages.user_id = users.user_id JOIN topics ON messages.topic_id = topics.topic_id WHERE board_id=:id GROUP BY topics.topic_subject ORDER BY topics.topic_id, messages.message_date ASC;');
+          $this->db->bind(':id',$getid);       
+          $results = $this->db->resultSet();
+        return $results;
+     }
 
 
     public function createTopic($data){

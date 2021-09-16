@@ -9,11 +9,13 @@ class Topics extends Controller{
        
         $topics = $this->topicModel->findAllTopics();
         $messages = $this->topicModel->messagesByTopic();
+        $lastMessage =$this->topicModel->lastMessage();
    
 
         $data = [
           'topics' => $topics,
-          'messages' => $messages
+          'messages' => $messages,
+          'lastMessage' =>$lastMessage
         ];
    
 

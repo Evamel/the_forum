@@ -33,7 +33,12 @@ require APPROOT . '/views/includes/right.php';
      </a>
      <?php endif ?>
   
-    <?php foreach($data['messages'] as $messages):?>
+     <?php foreach($data['topics'] as $key => $messages):?>
+    <?php 
+    $messagesCount =$data['messages'][$key];
+    $lastMessage =$data['lastMessage'][$key];
+    ?>
+  
     <div id="container-item">
 
     <a href="<?php echo URLROOT . "/messages/index.php?id=" . $messages->topic_id ?>">
@@ -44,12 +49,13 @@ require APPROOT . '/views/includes/right.php';
        
 
                  <div id="container-user">  
-                 <?php echo $messages->total;?>
-                 <br>    
-                  <?php echo $messages->user_name;?>
+                 <?php echo 'Topic by: ' . $messages->user_name;?>
                  <br>
+                 <?php echo 'Total messages: ' . $messagesCount->total;?>
+                 <br>    
+               
                  <h5>
-                  <?php echo 'posted on: ' . date('F j h:m', strtotime($messages->topic_date)) ?>
+                  <?php echo 'last message by: ' . $lastMessage->user_name . '<br> posted on: ' . date('F j h:m', strtotime($lastMessage->message_date)) ?>
                  </h5>
                  </div>
                 
