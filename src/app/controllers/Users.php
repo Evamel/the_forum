@@ -31,7 +31,7 @@ class Users extends Controller
                 'username' => trim($_POST['username']),
                 'email' => trim($_POST['email']),
                 'signature' => trim($_POST['signature']),
-                'avatar' => "https://www.gravatar.com/avatar/" . md5(trim($_POST['email'])) . "?s=64&d=mp",
+                'avatar' => base64_encode($_POST['avatar']),
                 'usernameError' => '',
                 'emailError' => '',
                 'signatureError' => '',
@@ -210,6 +210,7 @@ class Users extends Controller
         $_SESSION['date'] = $user->user_date;
         $_SESSION['signature'] = $user->user_signature;
         $_SESSION['level'] = $user->user_level;
+        $_SESSION['avatar'] = $user->user_avatar;
         header('location:' . URLROOT . '/users/userprofile');
     }
 
@@ -221,6 +222,7 @@ class Users extends Controller
         unset($_SESSION['date']);
         unset($_SESSION['signature']);
         unset($_SESSION['level']);
+        unset($_SESSION['avatar']);
         header('location:' . URLROOT . '/users/login');
     }
 }
