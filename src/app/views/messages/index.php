@@ -40,7 +40,7 @@ require APPROOT . '/views/includes/right.php';
     </p>
 
      <h5>
-         <?php echo 'posted on: ' . date('F j h:m', strtotime($message->message_date)) ?>
+         <?php echo 'posted on: ' . date('j F Y  H:i', strtotime($message->message_date)) ?>
      </h5>
     
     <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $message->user_id): ?>

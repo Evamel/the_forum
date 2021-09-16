@@ -29,16 +29,13 @@ require APPROOT . '/views/includes/right.php';
     $messagesCount =$data['sumPosts'][$key];
     $lastMessage =$data['lastMessages'][$key];
   
-    
-    foreach($lastMessage as $message){
-        echo $message->message_date.'<br>';
-    }
     ?>
-    
+  
 
     
     
     <div id="container-item">
+   
     
         <a href="<?php echo URLROOT . "/topics/index.php?id=" . $board->board_id ?>">
         <h2>
@@ -63,9 +60,14 @@ require APPROOT . '/views/includes/right.php';
                   <?php echo 'Messages: ' . $messagesCount->messageTotal . '<br>';?>
                   </p> 
 
-                 <p>
-                 <?php echo 'last post: ' . date('F j h:m', strtotime($lastMessage->message_date))  ?>
-                 </p>
+                 <?php
+    foreach($lastMessage as $message){
+        $timestamp = strtotime($message->message_date);
+        $newdate = date ("d/m/Y H:i", $timestamp);
+        echo 'last post: ' . $newdate .'<br>';
+       
+    }
+    ?>
                  <br>
                  </div>
             </div>

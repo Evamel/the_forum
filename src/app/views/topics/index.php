@@ -56,7 +56,7 @@ require APPROOT . '/views/includes/right.php';
                  <br>    
                
                  <h5>
-                  <?php echo 'last message by: ' . $messages->user_name . '<br> posted on: ' . date('F j h:m', strtotime($messages->message_date)) ?>
+                  <?php echo 'last message by: ' . $messages->user_name . '<br> posted on: ' . date('j F Y H:i', strtotime($messages->message_date)) ?>
                  </h5>
                  </div>
                 

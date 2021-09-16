@@ -33,7 +33,7 @@ class Board
         JOIN topics ON messages.topic_id = topics.topic_id 
         JOIN boards ON topics.board_id = boards.board_id 
         WHERE boards.board_id=:id 
-        ORDER BY message_date DESC LIMIT 3;');
+        ORDER BY message_date DESC LIMIT 1;');
         $this->db->bind(':id',$id);
         $results = $this->db->resultSet();
         return $results;
