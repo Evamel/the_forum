@@ -27,9 +27,7 @@ require APPROOT . '/views/includes/right.php';
     <?php 
     $topicsCount =$data['sumTopics'][$key];
     $messagesCount =$data['sumPosts'][$key];
-    echo "<pre style='color:black'>";
-    var_dump($data['lastPost'][$key]);
-    echo "</pre>" ;
+    $lastMessages =$data['lastPostDate'][$key];
     ?>
     
     <div id="container-item">
@@ -52,13 +50,13 @@ require APPROOT . '/views/includes/right.php';
                  <p>
                  <?php  echo 'Topics: ' . $topicsCount->topicTotal . '<br>';?>
                  </p>
-                 <br> 
+
                  <p>  
                   <?php echo 'Messages: ' . $messagesCount->messageTotal . '<br>';?>
                   </p> 
-                 <br>
+
                  <p>
-                 <?php echo 'last post: ' . date('F j h:m', strtotime($board->board_id)) ?>
+                 <?php echo 'last post: ' . date('F j h:m', strtotime($lastMessages->message_date)) . '   by: ' . $lastMessages->user_name ?>
                  </p>
                  <br>
                  </div>
