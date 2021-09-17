@@ -1,6 +1,4 @@
 <?php
-
-
 // (D) DATABASE SETTINGS 
 define("DB_HOST", "mysql");
 define("DB_USER", "root");

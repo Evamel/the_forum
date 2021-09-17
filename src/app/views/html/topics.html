@@ -1,0 +1,121 @@
+<!-- New topic and update topic, require database of the topic -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a7577a9f0e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/public/css/topics.css">
+
+    <title>Topics</title>
+    <header>
+        <div class="log">
+            <a href="#"><i class="far fa-edit"></i> Register</a>
+            <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+        
+<h1>The forum</h1>
+    </header>
+
+
+<body>
+    <div class="Container">
+        <div>
+            <a href="index.php"><i class="fas fa-home"></i>Home</a>
+            <a href="board.php">
+                < Boards</a>
+                    <a href="category.php"></a>
+                    <a href="newtopic.php">Liste topics</a>
+        </div>
+        <h2>Liste topics</h2>
+        <div class="rules">
+            <p>Forum rules</p>
+        </div>
+
+        <div class="btnTopics">
+            <button class="newTopic"> New topic<i class="fas fa-pen"></i></i></button>
+            <div class="searchbarTopic">
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <button class="btnParam"><i class="fas fa-cog"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="blocAnnou">
+        <section class="container-fluid announce">
+            <div class="row announceTitre">
+                <p class="col-md-8 name">Annoucements</p>
+                <i class="col-md-1 fas fa-comments"></i>
+                <i class="col-md-1 fas fa-eye"></i>
+                <i class="col-md-2 far fa-clock"></i>
+            </div>
+            <div class="row announceText">
+                <i class="col-md-3 fas fa-bullhorn"></i>
+                <div class="col-md-4 textAnn">
+                <p class="annouceText">This is a global announcement</p>
+                <p class="annouceDetails"> by Carla in Unread forum</p>
+                </div>
+                <i class="col-md-1 fas fa-bullhorn"></i>
+                <p class="col-md-1 numberOfMessages"></p>
+                <p class="col-md-1 numberOfviews"></p>
+                <p class="col-md-2 details">by</p>
+            </div>
+        </section>
+        <section class="container-fluid topics">
+            <div class="topicOne">
+            <div class="row topicsTitres">
+                <p class="col-md-8 nomTopic">Topics</p>
+                <i class="col-md-1 fas fa-comments"></i>
+                <i class="col-md-1 fas fa-eye"></i>
+                <i class="col-md-2 far fa-clock"></i>
+            </div>
+            <div class="topicTwo">
+            <div class="row topicsText">
+                <i class="col-md-3 fas fa-check"></i>
+                <div class="col-md-4 infosTitre">
+                <p class="topicTitre">Topic unread</p>
+                <p class="topicInfo">by <div class="byName">Blabla</div></p>
+                </div>
+                <div class="col-md-1 icon"></div>
+                <div class="col-md-1 numOfMess">756</div>
+                <div class="col-md-1 numOfView">1945</div>
+                <div class="col-md-2 time">by <div class="byName">Blabla</div> Sun Oct 09 2016 6:58 pm</div>
+            </div>         
+            </div>
+        </div>
+            <div class="topicThree">
+            <div class="row topicsText">
+                <i class="col-md-3 fas fa-times"></i>
+                <div class="col-md-4 infosTitre">
+                <p class="col-md-4 topicTitre">Topic locked (Mine)</p>
+                <p class="topicInfo">by <div class="byName">Blabla</div></p>
+                </div>
+                <i class="col-md-1 fas fa-lock"></i>
+                <div class="col-md-1 numOfMess">756</div>
+                <div class="col-md-1 numOfView">1945</div>
+                <div class="col-md-2 time">by <div class="byName">Blabla</div> Sun Oct 09 2016 6:58 pm</div>
+            </div>
+            </div>
+            <div class="topicFour">
+                <div class="row topicsText">
+                    <i class="col-md-3 fas fa-grip-lines"></i>
+                    <div class="col-md-4 infosTitre">
+                        <p class="topicTitre">Topic read</p>
+                        <p class="topicInfo">by <div class="byName">Blabla</div></p>
+                    </div>
+                    <p class="col-md-1 empt"></p>
+                    <div class="col-md-1 numOfMess">756</div>
+                    <div class="col-md-1 numOfView">1945</div>
+                    <div class="col-md-2 time">by <div class="byName">Blabla</div> Sun Oct 09 2016 6:58 pm</div>
+                </div>
+                </div>
+        </section>
+    </div>
+    </div>
+
+</body>
+</html>
