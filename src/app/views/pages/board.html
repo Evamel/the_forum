@@ -6,41 +6,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/public/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/src/public/css/bootstrap-grid.min.css.map">
+    <link rel="stylesheet" href="/src/public/scss/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a7577a9f0e.js" crossorigin="anonymous"></script>
     <title>The for homme</title>
 </head>
 
 <body>
-    <header>
-        <img src="../../../public/./images/tortue.jpg" alt="tortue">
-        <h1>The for homme</h1>
-        <div>
+    <header class="header">
+        <img src="" alt="tortue">
+        <div class="log">
             <a href="#"><i class="far fa-edit"></i>Register</a>
             <a href="#"><i class="fas fa-sign-in-alt"></i>login</a>
         </div>
+        <h1>The for homme</h1>
     </header>
-    <div class="Container">
-        <div>
-            <a href="#"><i class="fas fa-home"></i>Home</a>
-            <a href="#">
-                < Boards</a>
+    <div class="container-fluid ">
+        <div class="path">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home </a></li>
+                <li><a href="#">  < Board </a></li>
+            </ul>
         </div>
-        <div class="BlocGauche">
-            <h2>Category One</h2>
-            <div class="BoardCategoryOne">
-                <article class="BoardCategoryOneArticle">
-                    <img class="" src="" alt="" />
+        
+        <h2>Category One</h2>
+            <article class="container-fluid article">
+                <div class="row">
+                <div class="col-md-4 user"id="catOne">
+                    <div class="containerTopic">
+                    <img class="avatar" src="/src/public/images/mon-chat-est-trop-agressif.jpg" alt="chat" />
                     <div class="textTopicCategoryOne">
-                        <h3 class="titreTopicCategoryOne"></h3>
-                        <p class="descriptionTopicCategoryOne"></p>
+                        <h3 class="titreTopicCategoryOne">titre</h3>
+                        <p class="descriptionTopicCategoryOne">voici mon premier </p>
                     </div>
+                    <div class="color"></div>
                     <ul class="numberTopic">
                         <li class="numberOfTopic">Topics</li>
                         <li class="numberOfPosts">Posts</li>
                         <li class="numberOfLastPost">Last post</li>
                     </ul>
-                </article>
+                    </div>
+                </div>
+                <div class="col-md-4 user"id="catOne">
+                <img class="avatar" src="/src/public/images/mon-chat-est-trop-agressif.jpg" alt="chat" />
+                <div class="textTopicCategoryOne">
+                    <h3 class="titreTopicCategoryOne">titre</h3>
+                    <p class="descriptionTopicCategoryOne">voici mon premier topic</p>
+                </div>
+                <div class="color"></div>
+                <ul class="numberTopic">
+                    <li class="numberOfTopic">Topics</li>
+                    <li class="numberOfPosts">Posts</li>
+                    <li class="numberOfLastPost">Last post</li>
+                </ul>
             </div>
+            <div class="col-md-4 user"id="catOne">
+            <img class="avatar" src="/src/public/images/mon-chat-est-trop-agressif.jpg" alt="chat" />
+            <div class="textTopicCategoryOne">
+                <h3 class="titreTopicCategoryOne">titre</h3>
+                <p class="descriptionTopicCategoryOne">voici mon premier topic</p>
+            </div>
+            <div class="color"></div>
+            <ul class="numberTopic">
+                <li class="numberOfTopic">Topics</li>
+                <li class="numberOfPosts">Posts</li>
+                <li class="numberOfLastPost">Last post</li>
+            </ul>
+            </div>
+        </div>
+        </article>
             <h2>Category Two</h2>
             <div class="BoardCategoryTwo">
                 <article class="BoardCategoryTwoArticle">
@@ -71,7 +109,7 @@
                     </ul>
                 </article>
             </div>
-        </div>
+    
         <div class="BlocDroit">
             <div class="BlocDroitLogin">
                 <input type="search" id="BlocDroitSearch" name="q" placeholder="Search...">
@@ -124,6 +162,7 @@
                 </div>
             </div>
         </div>
+    </div>
         <footer>
             <div class="logos">
                 <i class="fab fa-twitter"></i>
