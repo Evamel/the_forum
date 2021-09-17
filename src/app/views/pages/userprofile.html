@@ -1,0 +1,81 @@
+<!-- User profile -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a7577a9f0e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/public/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="/src/public/css/user_profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300,400,500,600,800&display=swap" rel="stylesheet">
+    <title>Topic</title>
+</head>
+<body>
+    <header>
+        <div class="log">
+            <a href="#"><i class="far fa-edit"></i> Register</a>
+            <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+        
+<h1>The forum</h1>
+    </header>
+
+    <div class="container-fluid">
+        <div class="path">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home </a></li>
+                <li><a href="#">  < Board </a></li>
+                <li><a href="#">  < Topics </a></li>
+                <li><a href="#">  < My Profil </a></li>
+            </ul>
+        </div>
+
+        <h2>My Profil</h2>
+
+        <div class="btnMessages">
+            <button class="reply"> Save<i class="fas fa-pen"></i></button>
+            <button class="tool"><i class="fas fa-wrench"></i> <i class="fas fa-sort-down"></i></button>
+            <div class="searchbarMessage">
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <button class="btnParam"><i class="fas fa-cog"></i></button>
+                  </form>
+            </div>
+        </div>
+
+        <section class="profil">
+
+            <div class="name">
+                <img class="avatar" src="/src/public/images/chat.jpg" alt="Me">
+                <p class="pseudo">Minoo</p>
+            </div>
+
+            <div class="infos">
+                <div class="firstName">Roger</div>
+                <div class="lastName">Minoo</div>
+                <div class="email">roger.minoo@blabla.com</div>
+                <div class="pass">1234</div>
+            </div>
+        </section>
+        <div class="btnMessageEnd">
+            <button class="reply"> Save <i class="fas fa-reply"></i></button>
+            <button class="tool"> <i class="fas fa-wrench"></i> <i class="fas fa-sort-down"></i></button>
+        </div>
+
+        <div class="pathEnd">
+            <a href="#">< Return to topics</a>
+        
+            <select name="jump" id="jumpTo">
+                <option value="">Jump to</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster">Hamster</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>

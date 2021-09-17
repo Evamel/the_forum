@@ -1,0 +1,77 @@
+.container-fluid {
+  border-radius: 10px;
+  background-color: #8F8F8F;
+  padding-top: 0px;
+  width: 96%;
+}
+
+.profil {
+  background-color: #F9F9F9;
+  margin: 3rem;
+  border-radius: 30px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.profil .name {
+  font-family: 'Rubik', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px;
+}
+
+.profil .name .avatar {
+  margin-top: 3rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.profil .name .pseudo {
+  font-size: 30px;
+  color: #AB2819;
+}
+
+.profil .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+}
+
+.profil .infos .firstName {
+  padding: 1rem;
+}
+
+.profil .infos .lastName {
+  padding: 1rem;
+}
+
+.profil .infos .email {
+  padding: 1rem;
+}
+
+.profil .infos .pass {
+  padding: 1rem;
+}
+/*# sourceMappingURL=user_profile.css.map */
