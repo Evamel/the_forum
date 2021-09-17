@@ -25,11 +25,19 @@ require APPROOT . '/views/includes/right.php';
 
 <div class ="container">
   
-    <?php foreach($data['messages'] as $message):?>
+    <?php foreach($data['messages'] as $message):
+        $avatar = "https://www.gravatar.com/avatar/" . md5($_SESSION['email']) . "?s=64&d=mp";?>
+        
     <div id="container-item">
     
 
      <div id="container-user">   
+     <img src="<?php  if (!empty($message->user_avatar)) {
+        echo URLROOT . '/public/img/' . base64_decode($message->user_avatar);} 
+        else { 
+            echo $avatar;
+        } ?>" alt="avatar" width="64" height="64">
+     
      <?php echo $message->user_name;?>
      <br>
      <?php echo $message->user_signature;?>

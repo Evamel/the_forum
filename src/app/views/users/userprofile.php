@@ -26,7 +26,11 @@ require APPROOT . '/views/includes/head.php';
     $defaultAvatar = "";
     $avatar = "https://www.gravatar.com/avatar/" . md5($_SESSION['email']) . "?s=64&d=mp";
     ?>
-    <img src="<?php echo $avatar; ?>" alt="avatar" />
+    <img src="<?php  if (!empty($_SESSION['avatar'])) {
+        echo URLROOT . '/public/img/' . base64_decode( $_SESSION['avatar']);} 
+        else { 
+            echo $avatar;
+        } ?>" alt="avatar" width="64" height="64">
     <ul>
         <li><?php echo $_SESSION['username'] ?></li>
         <li><?php echo $_SESSION['email'] ?></li>

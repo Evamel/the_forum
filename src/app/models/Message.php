@@ -11,7 +11,7 @@ class Message
   public function findAllMessages()
   {
     $getid = $_GET['id'];
-    $this->db->query('SELECT messages.message_date,messages.message_content, messages.message_id, messages.user_id, messages.topic_id, users.user_name, users.user_signature  FROM messages INNER JOIN users ON messages.user_id = users.user_id WHERE topic_id=:id  ORDER BY message_date ASC');
+    $this->db->query('SELECT messages.message_date,messages.message_content, messages.message_id, messages.user_id, messages.topic_id, users.user_name, users.user_signature, users.user_avatar  FROM messages INNER JOIN users ON messages.user_id = users.user_id WHERE topic_id=:id  ORDER BY message_date ASC');
     $this->db->bind(':id', $getid);
     $results = $this->db->resultSet();
     return $results;

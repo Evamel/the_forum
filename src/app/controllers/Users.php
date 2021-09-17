@@ -8,6 +8,7 @@ class Users extends Controller
 
     public function userProfile()
     {
+        
         $this->view('users/userprofile');
     }
 
@@ -26,6 +27,7 @@ class Users extends Controller
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            
             $data = [
                 'id' => $_SESSION['user_id'],
                 'username' => trim($_POST['username']),
@@ -40,6 +42,8 @@ class Users extends Controller
             $nameValidation = "/^[a-zA-Z0-9]*$/";
             //regex avec les - les espaces et les . 
             $signatureValidation = "/^[-a-zA-Z0-9 .]+$/";
+
+          
             //validate username
             if (empty($data['username'])) {
                 $data['usernameError'] = 'Please enter your name =^w^=';
@@ -66,8 +70,8 @@ class Users extends Controller
             //confirm errors are empty
             if (empty($data['usernameError']) && empty($data['emailError']) && empty($data['signatureError'])) {
                 if ($this->userModel->edit($data)) {
-                    //redirect to login page
-                    header('location: ' . URLROOT . '/pages/index');
+                    $this->logout();
+                    
                 } else {
                     die('Something went wrong =^o^=');
                 }
