@@ -72,4 +72,3 @@ require APPROOT . '/views/includes/right.php';
 require APPROOT . '/views/includes/footer.php';
 ?>
 </div>
-

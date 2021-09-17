@@ -3,44 +3,42 @@ require APPROOT . '/views/includes/head.php';
 ?>
 
 <div id="section-landing">
- 
-<?php 
-var_dump($_SESSION);  
-?>
 
-<?php
-require APPROOT . '/views/includes/navigation.php';
-?>
+    <?php
+    var_dump($_SESSION);
+    ?>
 
-<?php
-require APPROOT . '/views/includes/right.php';
-?>
+    <?php
+    require APPROOT . '/views/includes/navigation.php';
+    ?>
 
+    <?php
+    require APPROOT . '/views/includes/right.php';
+    ?>
 
-<div class ="container">
-  
-<div class="container-center">
-    <h2> Edit your topic </h2>
-    <form action="<?php echo URLROOT; ?>/topics/edit/<?php echo $data['topic']->topic_id?>" method="POST">
+    <div class="container">
 
-    <div class='form-item'>
-<textarea name="subject" placeholder="your topic" >
-<?php echo $data['topic']->topic_subject?>
-</textarea>
+        <div class="container-center">
+            <h2> Edit your topic </h2>
+            <form action="<?php echo URLROOT; ?>/topics/edit/<?php echo $data['topic']->topic_id ?>" method="POST">
 
-<span class="invalidFeedback">
-    <?php echo $data['subjectError']; ?>
-</span>
+                <div class='form-item'>
+                    <textarea name="subject" placeholder="your topic">
+                        <?php echo $data['topic']->topic_subject ?>
+                    </textarea>
 
-</div>
-    <button class="btn-green" name="submit" type="submit">
-    Submit
-    </button>
-</form>
-</div>
+                    <span class="invalidFeedback">
+                        <?php echo $data['subjectError']; ?>
+                    </span>
 
-<?php
-require APPROOT . '/views/includes/footer.php';
-?>
-</div>
+                </div>
+                <button class="btn-green" name="submit" type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
 
+        <?php
+        require APPROOT . '/views/includes/footer.php';
+        ?>
+    </div>

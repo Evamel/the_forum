@@ -81,5 +81,3 @@ require APPROOT . '/views/includes/right.php';
 <?php
 require APPROOT . '/views/includes/footer.php';
 ?>
-
-
