@@ -143,3 +143,80 @@ h2{
         @extend .message1;
     }
 }
+
+
+
+
+//BOARD CATEGORIES
+.categories{
+    width: 98%;
+    h2{
+        margin: 30px 0px 20px 0px;
+    }
+}
+.categoryOne{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    background-color: #F9F9F9;
+    padding: 10px;
+    border-radius: 30px;
+    font-size:small;
+.oneTop{
+    width: 32%;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    margin-right: 10px;
+    border: none;
+    .detTop{
+        padding-top: 10px;
+        padding-left: 10px;
+        .imgTop{
+            width: 80px;
+            height: 80px;
+            border-radius:50px;
+        }
+        .titreTop{
+            font-size: medium;
+            font-weight: 400;
+        }
+        .descTop{
+            color: #8F8F8F;
+        }
+    }
+    .lineTop{
+        border-bottom: solid 2px rgb(72, 104, 220);
+        margin: 10px;
+        width: 20%
+    }
+    .numTop{
+        margin-bottom: 10px;
+        padding: 0px 0px 10px 5px;
+        font-size: 18px;
+        color: #8F8F8F;
+        .dateTop{
+            font-size: 15px;
+        }
+    }
+}
+.twoTop{
+    @extend .oneTop;
+}
+.threeTop{
+    @extend .oneTop;
+}
+.fourTop{
+    @extend .oneTop;
+}
+.fiveTop{
+    @extend .oneTop;
+}
+}
+
+.categoryTwo{
+    @extend .categoryOne
+}
+
+.categoryThree{
+    @extend .categoryOne
+}

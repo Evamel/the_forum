@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a7577a9f0e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/public/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="/src/public/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300,400,500,600,800&display=swap" rel="stylesheet">
+    <title>Board</title>
+</head>
+<body>
+
+    <header>
+        <h1>Tracker</h1>
+    </header>
+    
+<div class="container-fluid categories">
+    <div class="path">
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Home </a></li>
+        </ul>
+    </div>
+
+    <div class="BlocDroit">
+        <div class="BlocDroitLogin">
+            <div class="searchBarreBlocDroitLogin">
+                <input type="search" id="BlocDroitSearch" name="q" placeholder="Search...">
+                <button id="btnUn" type="submit"><i class="fa fa-search"></i></button>
+                <button id="btnDeux" class="btnParam"><i class="fas fa-cog"></i></button>
+            </div>
+            <div class="ligneColorLog"></div>
+            <div class="BlocDroitLigneUn"></div>
+            <ul class="loginRegister">
+                <li><a href="#">Login</a></li>
+                <li class="point">.</li>
+                <li><a href="#">Register</a></li>
+            </ul>
+            <div class="BlocDroitLigneDeux"></div>
+            <form class="log">
+                <label>Username :</label>
+                <input class="Username" type="text" placeholder="Enter the username" name="username" required>
+                <label class="password">Password :</label>
+                <input class="Password" type="password" placeholder="Enter password" name="password" required>
+                <input class="remember" type="checkbox" id="remember" name="rememberMe">
+                <label class="remember" for="remember">Remember me</label>
+                <input class="btnLogin" type="submit" id='submit' value='LOGIN'>
+            </form>
+            <div class="BlocDroitLigneDeux"></div>
+            <p class="forgot">I forgot my password</p>
+        </div>
+        <div class="lastPost">
+            <div class="lastpostcolor">
+                <h3 class="lastPostTitle">Last Posts</h3>
+            </div>
+            <div class="BlocDroitArticle">
+                <article class="articleLastPost">
+                    <h3 class="lastPostTitre"></h3>
+                    <p class="lastPostHours"></p>
+                    <p class="lastPostText"></p>
+                    <p class="lastPostTags"></p>
+                </article>
+            </div>
+            <div class="lastActiveUser">
+                <div class="lastActiveUserColor">
+                    <h3 class="lastActiveUserTitle">Last active user</h3>
+                </div>
+                <div class="blocArticleUser">
+                    <article class="articleUser">
+                        <img src="" alt="" />
+                        <div class="lastActiveUserText">
+                            <h4 class="nameUser"></h4>
+                            <p class="shortDescription">
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Category One</h2>
+    <article class="categoryOne">
+        <div class="card oneTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat.jpg" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+
+        <div class="card twoTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat.jpg" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+
+        <div class="card threeTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat.jpg" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+
+        <div class="card fourTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat.jpg" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+
+        <div class="card fiveTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat.jpg" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+    </article>
+
+
+    <h2>Category Two</h2>
+    <article class="categoryTwo">
+        <div class="card oneTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat2" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+
+        <div class="card twoTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat2" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+    </article>
+
+
+
+    <h2>Category Three</h2>
+    <article class="categoryThree">
+        <div class="card oneTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat3" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+
+        <div class="card twoTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat3" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+
+        <div class="card threeTop">
+            <div class="row detTop">
+            <img class="col-md-4 imgTop" src="/src/public/images/chat3" alt="">
+            <div class="col-md-8 TitleDescTop">
+            <div class="titreTop">Cats rules</div>
+            <div class="descTop">This is where it beggins...</div>
+            </div>
+            </div>
+            <div class="lineTop"></div>
+            <div class="row numTop">
+                <div class="col-md-4 topTop">456 topics</div>
+                <div class="col-md-4 postsTop">203 posts</div>
+                <div class="col-md-4 dateTop">Sun 29 Jun 6:30 pm</div>
+            </div>
+        </div>
+    </article>
+</div>
+</body>
+</html>

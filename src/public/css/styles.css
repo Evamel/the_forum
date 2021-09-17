@@ -295,7 +295,7 @@ header .log a {
 }
 
 .BlocDroit .log {
-  display: inline-block;
+  display: flow-root;
   margin-left: 16px;
 }
 
@@ -562,5 +562,73 @@ h2 {
   text-align: center;
   padding-top: 12px;
   border: solid #8F8F8F 1px;
+}
+
+.categories {
+  width: 98%;
+}
+
+.categories h2 {
+  margin: 30px 0px 20px 0px;
+}
+
+.categoryOne, .categoryTwo, .categoryThree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #F9F9F9;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: small;
+}
+
+.categoryOne .oneTop, .categoryTwo .oneTop, .categoryThree .oneTop, .categoryOne .twoTop, .categoryTwo .twoTop, .categoryThree .twoTop, .categoryOne .threeTop, .categoryTwo .threeTop, .categoryThree .threeTop, .categoryOne .fourTop, .categoryTwo .fourTop, .categoryThree .fourTop, .categoryOne .fiveTop, .categoryTwo .fiveTop, .categoryThree .fiveTop {
+  width: 32%;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  margin-right: 10px;
+  border: none;
+}
+
+.categoryOne .oneTop .detTop, .categoryTwo .oneTop .detTop, .categoryThree .oneTop .detTop, .categoryOne .twoTop .detTop, .categoryTwo .twoTop .detTop, .categoryThree .twoTop .detTop, .categoryOne .threeTop .detTop, .categoryTwo .threeTop .detTop, .categoryThree .threeTop .detTop, .categoryOne .fourTop .detTop, .categoryTwo .fourTop .detTop, .categoryThree .fourTop .detTop, .categoryOne .fiveTop .detTop, .categoryTwo .fiveTop .detTop, .categoryThree .fiveTop .detTop {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.categoryOne .oneTop .detTop .imgTop, .categoryTwo .oneTop .detTop .imgTop, .categoryThree .oneTop .detTop .imgTop, .categoryOne .twoTop .detTop .imgTop, .categoryTwo .twoTop .detTop .imgTop, .categoryThree .twoTop .detTop .imgTop, .categoryOne .threeTop .detTop .imgTop, .categoryTwo .threeTop .detTop .imgTop, .categoryThree .threeTop .detTop .imgTop, .categoryOne .fourTop .detTop .imgTop, .categoryTwo .fourTop .detTop .imgTop, .categoryThree .fourTop .detTop .imgTop, .categoryOne .fiveTop .detTop .imgTop, .categoryTwo .fiveTop .detTop .imgTop, .categoryThree .fiveTop .detTop .imgTop {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+.categoryOne .oneTop .detTop .titreTop, .categoryTwo .oneTop .detTop .titreTop, .categoryThree .oneTop .detTop .titreTop, .categoryOne .twoTop .detTop .titreTop, .categoryTwo .twoTop .detTop .titreTop, .categoryThree .twoTop .detTop .titreTop, .categoryOne .threeTop .detTop .titreTop, .categoryTwo .threeTop .detTop .titreTop, .categoryThree .threeTop .detTop .titreTop, .categoryOne .fourTop .detTop .titreTop, .categoryTwo .fourTop .detTop .titreTop, .categoryThree .fourTop .detTop .titreTop, .categoryOne .fiveTop .detTop .titreTop, .categoryTwo .fiveTop .detTop .titreTop, .categoryThree .fiveTop .detTop .titreTop {
+  font-size: medium;
+  font-weight: 400;
+}
+
+.categoryOne .oneTop .detTop .descTop, .categoryTwo .oneTop .detTop .descTop, .categoryThree .oneTop .detTop .descTop, .categoryOne .twoTop .detTop .descTop, .categoryTwo .twoTop .detTop .descTop, .categoryThree .twoTop .detTop .descTop, .categoryOne .threeTop .detTop .descTop, .categoryTwo .threeTop .detTop .descTop, .categoryThree .threeTop .detTop .descTop, .categoryOne .fourTop .detTop .descTop, .categoryTwo .fourTop .detTop .descTop, .categoryThree .fourTop .detTop .descTop, .categoryOne .fiveTop .detTop .descTop, .categoryTwo .fiveTop .detTop .descTop, .categoryThree .fiveTop .detTop .descTop {
+  color: #8F8F8F;
+}
+
+.categoryOne .oneTop .lineTop, .categoryTwo .oneTop .lineTop, .categoryThree .oneTop .lineTop, .categoryOne .twoTop .lineTop, .categoryTwo .twoTop .lineTop, .categoryThree .twoTop .lineTop, .categoryOne .threeTop .lineTop, .categoryTwo .threeTop .lineTop, .categoryThree .threeTop .lineTop, .categoryOne .fourTop .lineTop, .categoryTwo .fourTop .lineTop, .categoryThree .fourTop .lineTop, .categoryOne .fiveTop .lineTop, .categoryTwo .fiveTop .lineTop, .categoryThree .fiveTop .lineTop {
+  border-bottom: solid 2px #4868dc;
+  margin: 10px;
+  width: 20%;
+}
+
+.categoryOne .oneTop .numTop, .categoryTwo .oneTop .numTop, .categoryThree .oneTop .numTop, .categoryOne .twoTop .numTop, .categoryTwo .twoTop .numTop, .categoryThree .twoTop .numTop, .categoryOne .threeTop .numTop, .categoryTwo .threeTop .numTop, .categoryThree .threeTop .numTop, .categoryOne .fourTop .numTop, .categoryTwo .fourTop .numTop, .categoryThree .fourTop .numTop, .categoryOne .fiveTop .numTop, .categoryTwo .fiveTop .numTop, .categoryThree .fiveTop .numTop {
+  margin-bottom: 10px;
+  padding: 0px 0px 10px 5px;
+  font-size: 18px;
+  color: #8F8F8F;
+}
+
+.categoryOne .oneTop .numTop .dateTop, .categoryTwo .oneTop .numTop .dateTop, .categoryThree .oneTop .numTop .dateTop, .categoryOne .twoTop .numTop .dateTop, .categoryTwo .twoTop .numTop .dateTop, .categoryThree .twoTop .numTop .dateTop, .categoryOne .threeTop .numTop .dateTop, .categoryTwo .threeTop .numTop .dateTop, .categoryThree .threeTop .numTop .dateTop, .categoryOne .fourTop .numTop .dateTop, .categoryTwo .fourTop .numTop .dateTop, .categoryThree .fourTop .numTop .dateTop, .categoryOne .fiveTop .numTop .dateTop, .categoryTwo .fiveTop .numTop .dateTop, .categoryThree .fiveTop .numTop .dateTop {
+  font-size: 15px;
 }
 /*# sourceMappingURL=styles.css.map */
