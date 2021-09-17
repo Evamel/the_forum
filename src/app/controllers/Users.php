@@ -100,7 +100,7 @@ class Users extends Controller
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
-                'avatar' => "https://www.gravatar.com/avatar/" . md5(trim($_POST['email'])) . "?s=64&d=mp",
+                'avatar' => '',
                 'usernameError' => '',
                 'emailError' => '',
                 'passwordError' => '',
