@@ -1,0 +1,136 @@
+//RIGHT BLOC
+.searchBarreBlocDroitLogin{
+    background-color: #F7F7F7;
+    border: 2px solid gray;
+    border-radius: 30px;
+    width: 360px;
+    height: 42px;
+    margin: -12px 0px 26px 16px;
+}
+.BlocDroit{
+    background-color: #FFFFFF;
+    width: 30%;
+    float: right;
+    height: 66rem;
+    padding: 1 rem;
+    .BlocDroitLogin{
+        margin-top: 30px;
+        #BlocDroitSearch{
+            margin-left: 14px;
+            border: none;
+            margin-top: 2px;
+            padding: 5px 0px 0px;
+            background-color: #F7F7F7;
+        }
+        button{
+            border: solid 1px gray;
+            background-color: #F7F7F7;
+            border-top: none;
+            height: 39px;
+            width: 42px;
+            color: #989898;
+            margin-left: 4px;
+            
+        }
+        .btnParam{
+            border:none;
+            background-color: #F7F7F7;
+            height: 20px;
+            border-radius: 30px;
+            height: 26px;
+            width: 31px;
+            color: #989898;
+            margin: 0px;
+        }
+        .ligneColorLog{
+            border: solid 2px  rgb(72, 104, 220);
+            width: 22rem;
+            margin-left: 17px;
+            margin-bottom: 17px;
+        }
+        li{
+            list-style: none;
+            display: inline-flex;
+            padding: 2px;
+            color: #8F8F8F;
+            a{
+                color: gray;
+                text-decoration: none;
+            }
+        }
+        .point{
+            padding-bottom: 10px;
+            color: gray;
+        }
+       ul.loginRegister{
+        padding-left: 15px; 
+        margin: 0px;
+       }
+       .BlocDroitLigneDeux{
+        border: 1px solid gray;
+        width: 22rem;
+        border-top: none;
+        margin-left: 18px;
+        margin: 5px 0px 16px 16px;
+       }
+       .Username{
+        width: 22rem;
+        height: 42px;
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding-left: 15px;
+       }
+       .Password{
+        width: 22rem;
+        height: 42px;
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding-left: 15px;
+       }
+       .btnLogin{
+        cursor: pointer;
+        width: 22rem;
+        border: solid 2px transparent;
+        background: #B06AB3;
+        color: white;
+        border-radius: 20px;
+        height: 42px;
+        margin: 13px 0px 27px 0px;
+    }
+    .remember{
+        margin: 15px 0px 16px 2px;
+    }
+    .forgot{
+        margin: 0px 0px 54px 16px;
+    }
+       }
+       .log{
+            display: flow-root;
+            margin-left: 16px;
+       }
+       .lastpostcolor{
+        background: linear-gradient(90deg, rgb(174, 106, 179), rgb(72, 104, 220));
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 3.5rem;
+        margin-left: 16px;
+       }
+       .lastPostTitle{
+        font-size: 1.75rem;
+        color: white;
+        font-weight: 400;
+        padding: 10px 0px 0px 20px;
+       }
+       .BlocDroitArticle{
+        background-color: #F9F9F9;
+        height: 20rem;
+        margin: -16px 0px 0px 16px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+       }
+       .articleLastPost{
+           background-color: #FFFFFF;
+           height: 7rem;
+           margin-top: 10px;
+       }
+    }

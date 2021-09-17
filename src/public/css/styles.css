@@ -1,0 +1,634 @@
+header {
+  background: -webkit-gradient(linear, left top, right top, from(#ae6ab3), to(#4868dc));
+  background: linear-gradient(90deg, #ae6ab3, #4868dc);
+  text-align: center;
+  height: 20rem;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  color: white;
+  font-weight: lighter;
+}
+
+header h1 {
+  font-weight: lighter;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 150px;
+}
+
+header .log {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-right: 20px;
+  float: right;
+  font-size: 20px;
+}
+
+header .log a {
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+  font-weight: 400;
+}
+
+.btnMessages {
+  font-family: 'Rubik', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-left: 20px;
+}
+
+.btnMessages .reply {
+  font-weight: bold;
+  color: white;
+  background-color: #B06AB3;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 40px;
+}
+
+.btnMessages .tool {
+  font-weight: bold;
+  color: #909090;
+  background-color: #F7F7F7;
+  border: none;
+  padding: 8px;
+  margin-left: 10px;
+  border-radius: 10px;
+  width: 70px;
+  height: 40px;
+}
+
+.btnMessages .searchbarMessage {
+  font-weight: bold;
+  color: white;
+  background-color: #F7F7F7;
+  border: none;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 22rem;
+  height: 40px;
+  text-align: center;
+}
+
+.btnMessages .searchbarMessage input {
+  border: none;
+  background-color: #F7F7F7;
+}
+
+.btnMessages .searchbarMessage button {
+  border: none;
+  background-color: #F7F7F7;
+  height: 20px;
+}
+
+.btnMessages .searchbarMessage .fa {
+  font-weight: bold;
+  color: #909090;
+  background-color: #F7F7F7;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  width: auto;
+  height: 40px;
+}
+
+.btnMessages .searchbarMessage .fas {
+  font-weight: bold;
+  color: #909090;
+  background-color: #F7F7F7;
+  border: none;
+  padding: 8px;
+  width: auto;
+  height: 40px;
+}
+
+.btnMessageEnd {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-top: 61rem;
+}
+
+.btnMessageEnd .reply {
+  font-weight: bold;
+  color: white;
+  background-color: #B06AB3;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 40px;
+}
+
+.btnMessageEnd .tool {
+  font-weight: bold;
+  color: #909090;
+  background-color: #F7F7F7;
+  border: none;
+  padding: 8px;
+  margin-left: 10px;
+  border-radius: 10px;
+  width: 70px;
+  height: 40px;
+}
+
+.pathEnd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.pathEnd a {
+  text-decoration: none;
+  color: #6A6A6A;
+  padding: 5px;
+}
+
+.pathEnd #jumpTo {
+  font-weight: bold;
+  color: #909090;
+  background-color: #F7F7F7;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+}
+
+.searchBarreBlocDroitLogin {
+  background-color: #F7F7F7;
+  border: 2px solid gray;
+  border-radius: 30px;
+  width: 360px;
+  height: 42px;
+  margin: -12px 0px 26px 16px;
+}
+
+.BlocDroit {
+  background-color: #FFFFFF;
+  width: 30%;
+  float: right;
+  height: 66rem;
+  padding: 1 rem;
+}
+
+.BlocDroit .BlocDroitLogin {
+  margin-top: 30px;
+}
+
+.BlocDroit .BlocDroitLogin #BlocDroitSearch {
+  margin-left: 14px;
+  border: none;
+  margin-top: 2px;
+  padding: 5px 0px 0px;
+  background-color: #F7F7F7;
+}
+
+.BlocDroit .BlocDroitLogin button {
+  border: solid 1px gray;
+  background-color: #F7F7F7;
+  border-top: none;
+  height: 39px;
+  width: 42px;
+  color: #989898;
+  margin-left: 4px;
+}
+
+.BlocDroit .BlocDroitLogin .btnParam {
+  border: none;
+  background-color: #F7F7F7;
+  height: 20px;
+  border-radius: 30px;
+  height: 26px;
+  width: 31px;
+  color: #989898;
+  margin: 0px;
+}
+
+.BlocDroit .BlocDroitLogin .ligneColorLog {
+  border: solid 2px #4868dc;
+  width: 22rem;
+  margin-left: 17px;
+  margin-bottom: 17px;
+}
+
+.BlocDroit .BlocDroitLogin li {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 2px;
+  color: #8F8F8F;
+}
+
+.BlocDroit .BlocDroitLogin li a {
+  color: gray;
+  text-decoration: none;
+}
+
+.BlocDroit .BlocDroitLogin .point {
+  padding-bottom: 10px;
+  color: gray;
+}
+
+.BlocDroit .BlocDroitLogin ul.loginRegister {
+  padding-left: 15px;
+  margin: 0px;
+}
+
+.BlocDroit .BlocDroitLogin .BlocDroitLigneDeux {
+  border: 1px solid gray;
+  width: 22rem;
+  border-top: none;
+  margin-left: 18px;
+  margin: 5px 0px 16px 16px;
+}
+
+.BlocDroit .BlocDroitLogin .Username {
+  width: 22rem;
+  height: 42px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+.BlocDroit .BlocDroitLogin .Password {
+  width: 22rem;
+  height: 42px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+.BlocDroit .BlocDroitLogin .btnLogin {
+  cursor: pointer;
+  width: 22rem;
+  border: solid 2px transparent;
+  background: #B06AB3;
+  color: white;
+  border-radius: 20px;
+  height: 42px;
+  margin: 13px 0px 27px 0px;
+}
+
+.BlocDroit .BlocDroitLogin .remember {
+  margin: 15px 0px 16px 2px;
+}
+
+.BlocDroit .BlocDroitLogin .forgot {
+  margin: 0px 0px 54px 16px;
+}
+
+.BlocDroit .log {
+  display: flow-root;
+  margin-left: 16px;
+}
+
+.BlocDroit .lastpostcolor {
+  background: -webkit-gradient(linear, left top, right top, from(#ae6ab3), to(#4868dc));
+  background: linear-gradient(90deg, #ae6ab3, #4868dc);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 3.5rem;
+  margin-left: 16px;
+}
+
+.BlocDroit .lastPostTitle {
+  font-size: 1.75rem;
+  color: white;
+  font-weight: 400;
+  padding: 10px 0px 0px 20px;
+}
+
+.BlocDroit .BlocDroitArticle {
+  background-color: #F9F9F9;
+  height: 20rem;
+  margin: -16px 0px 0px 16px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.BlocDroit .articleLastPost {
+  background-color: #FFFFFF;
+  height: 7rem;
+  margin-top: 10px;
+}
+
+footer .logos {
+  background: -webkit-gradient(linear, left top, right top, from(#ae6ab3), to(#4868dc));
+  background: linear-gradient(90deg, #ae6ab3, #4868dc);
+  height: 160px;
+}
+
+footer .logos ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 68px;
+  margin-top: 80rem;
+}
+
+footer .logos ul li {
+  padding: 10px;
+  font-size: 40px;
+  color: white;
+  border: solid white 2px;
+  border-radius: 50px;
+  height: 4rem;
+  width: 4rem;
+  line-height: 40px;
+  margin: 0px 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .lastLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #2D3039;
+  height: 80px;
+}
+
+footer .lastLine ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  padding: 15px;
+}
+
+footer .lastLine ul li {
+  color: #6A6A6A;
+}
+
+footer .lastLine ul a {
+  text-decoration: none;
+  color: #B06AB3;
+  padding: 7px;
+}
+
+footer .lastLine .btn-up {
+  position: relative;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  background-color: #B06AB3;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+footer .lastLine .btn-up .fas {
+  padding: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F9F9F9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-fluid {
+  z-index: 2;
+  position: absolute;
+  margin: -77px 20px 0 20px;
+  border-radius: 10px;
+  background-color: white;
+  padding-top: 0px;
+  width: 96%;
+}
+
+.container-fluid .path ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 20px 0px 0px 0px;
+}
+
+.container-fluid .path ul a {
+  text-decoration: none;
+  color: #6A6A6A;
+  padding: 5px;
+}
+
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: lighter;
+  color: #6A6A6A;
+  padding-left: 30px;
+}
+
+.rules {
+  background-color: #ECD5D9;
+  margin-left: 30px;
+  border-left: solid 3px #BE3853;
+  border-radius: 5px;
+  color: #6A6A6A;
+  text-align: left;
+  padding-top: 4px;
+  width: 53rem;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  font-size: large;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.messages {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 20px;
+  background-color: #F9F9F9;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 66%;
+}
+
+.messages .message1, .messages .message2 {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-left: 0px;
+  margin-right: initial;
+  margin-top: initial;
+  margin-bottom: 20px;
+}
+
+.messages .message1 .user, .messages .message2 .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.messages .message1 .user .avatar, .messages .message2 .user .avatar {
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  width: 140px;
+}
+
+.messages .message1 .user .pseudo, .messages .message2 .user .pseudo {
+  color: #AB2819;
+  font-weight: bolder;
+}
+
+.messages .message1 .user .level, .messages .message2 .user .level {
+  color: gray;
+}
+
+.messages .message1 .user .numberOfPosts, .messages .message2 .user .numberOfPosts {
+  color: black;
+  font-weight: bold;
+}
+
+.messages .message1 .user .numberOfPosts .num, .messages .message2 .user .numberOfPosts .num {
+  color: gray;
+  font-weight: bold;
+}
+
+.messages .message1 .detailsMessage .date, .messages .message2 .detailsMessage .date {
+  color: gray;
+  font-weight: 600;
+}
+
+.messages .message1 .detailsMessage .hour, .messages .message2 .detailsMessage .hour {
+  color: gray;
+  font-weight: 600;
+}
+
+.messages .message1 .detailsMessage .textMessage, .messages .message2 .detailsMessage .textMessage {
+  color: black;
+}
+
+.messages .message1 .detailsMessage .lineMessSign, .messages .message2 .detailsMessage .lineMessSign {
+  border-top: solid #D9DCDF 1px;
+}
+
+.messages .message1 .detailsMessage .signatureMessage, .messages .message2 .detailsMessage .signatureMessage {
+  color: black;
+  padding-top: 20px;
+}
+
+.messages .message1 .quote, .messages .message2 .quote {
+  background-color: #F7F7F7;
+  color: #8F8F8F;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  text-align: center;
+  padding-top: 12px;
+  border: solid #8F8F8F 1px;
+}
+
+.categories {
+  width: 98%;
+}
+
+.categories h2 {
+  margin: 30px 0px 20px 0px;
+}
+
+.categoryOne, .categoryTwo, .categoryThree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #F9F9F9;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: small;
+}
+
+.categoryOne .oneTop, .categoryTwo .oneTop, .categoryThree .oneTop, .categoryOne .twoTop, .categoryTwo .twoTop, .categoryThree .twoTop, .categoryOne .threeTop, .categoryTwo .threeTop, .categoryThree .threeTop, .categoryOne .fourTop, .categoryTwo .fourTop, .categoryThree .fourTop, .categoryOne .fiveTop, .categoryTwo .fiveTop, .categoryThree .fiveTop {
+  width: 32%;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  margin-right: 10px;
+  border: none;
+}
+
+.categoryOne .oneTop .detTop, .categoryTwo .oneTop .detTop, .categoryThree .oneTop .detTop, .categoryOne .twoTop .detTop, .categoryTwo .twoTop .detTop, .categoryThree .twoTop .detTop, .categoryOne .threeTop .detTop, .categoryTwo .threeTop .detTop, .categoryThree .threeTop .detTop, .categoryOne .fourTop .detTop, .categoryTwo .fourTop .detTop, .categoryThree .fourTop .detTop, .categoryOne .fiveTop .detTop, .categoryTwo .fiveTop .detTop, .categoryThree .fiveTop .detTop {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.categoryOne .oneTop .detTop .imgTop, .categoryTwo .oneTop .detTop .imgTop, .categoryThree .oneTop .detTop .imgTop, .categoryOne .twoTop .detTop .imgTop, .categoryTwo .twoTop .detTop .imgTop, .categoryThree .twoTop .detTop .imgTop, .categoryOne .threeTop .detTop .imgTop, .categoryTwo .threeTop .detTop .imgTop, .categoryThree .threeTop .detTop .imgTop, .categoryOne .fourTop .detTop .imgTop, .categoryTwo .fourTop .detTop .imgTop, .categoryThree .fourTop .detTop .imgTop, .categoryOne .fiveTop .detTop .imgTop, .categoryTwo .fiveTop .detTop .imgTop, .categoryThree .fiveTop .detTop .imgTop {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+.categoryOne .oneTop .detTop .titreTop, .categoryTwo .oneTop .detTop .titreTop, .categoryThree .oneTop .detTop .titreTop, .categoryOne .twoTop .detTop .titreTop, .categoryTwo .twoTop .detTop .titreTop, .categoryThree .twoTop .detTop .titreTop, .categoryOne .threeTop .detTop .titreTop, .categoryTwo .threeTop .detTop .titreTop, .categoryThree .threeTop .detTop .titreTop, .categoryOne .fourTop .detTop .titreTop, .categoryTwo .fourTop .detTop .titreTop, .categoryThree .fourTop .detTop .titreTop, .categoryOne .fiveTop .detTop .titreTop, .categoryTwo .fiveTop .detTop .titreTop, .categoryThree .fiveTop .detTop .titreTop {
+  font-size: medium;
+  font-weight: 400;
+}
+
+.categoryOne .oneTop .detTop .descTop, .categoryTwo .oneTop .detTop .descTop, .categoryThree .oneTop .detTop .descTop, .categoryOne .twoTop .detTop .descTop, .categoryTwo .twoTop .detTop .descTop, .categoryThree .twoTop .detTop .descTop, .categoryOne .threeTop .detTop .descTop, .categoryTwo .threeTop .detTop .descTop, .categoryThree .threeTop .detTop .descTop, .categoryOne .fourTop .detTop .descTop, .categoryTwo .fourTop .detTop .descTop, .categoryThree .fourTop .detTop .descTop, .categoryOne .fiveTop .detTop .descTop, .categoryTwo .fiveTop .detTop .descTop, .categoryThree .fiveTop .detTop .descTop {
+  color: #8F8F8F;
+}
+
+.categoryOne .oneTop .lineTop, .categoryTwo .oneTop .lineTop, .categoryThree .oneTop .lineTop, .categoryOne .twoTop .lineTop, .categoryTwo .twoTop .lineTop, .categoryThree .twoTop .lineTop, .categoryOne .threeTop .lineTop, .categoryTwo .threeTop .lineTop, .categoryThree .threeTop .lineTop, .categoryOne .fourTop .lineTop, .categoryTwo .fourTop .lineTop, .categoryThree .fourTop .lineTop, .categoryOne .fiveTop .lineTop, .categoryTwo .fiveTop .lineTop, .categoryThree .fiveTop .lineTop {
+  border-bottom: solid 2px #4868dc;
+  margin: 10px;
+  width: 20%;
+}
+
+.categoryOne .oneTop .numTop, .categoryTwo .oneTop .numTop, .categoryThree .oneTop .numTop, .categoryOne .twoTop .numTop, .categoryTwo .twoTop .numTop, .categoryThree .twoTop .numTop, .categoryOne .threeTop .numTop, .categoryTwo .threeTop .numTop, .categoryThree .threeTop .numTop, .categoryOne .fourTop .numTop, .categoryTwo .fourTop .numTop, .categoryThree .fourTop .numTop, .categoryOne .fiveTop .numTop, .categoryTwo .fiveTop .numTop, .categoryThree .fiveTop .numTop {
+  margin-bottom: 10px;
+  padding: 0px 0px 10px 5px;
+  font-size: 18px;
+  color: #8F8F8F;
+}
+
+.categoryOne .oneTop .numTop .dateTop, .categoryTwo .oneTop .numTop .dateTop, .categoryThree .oneTop .numTop .dateTop, .categoryOne .twoTop .numTop .dateTop, .categoryTwo .twoTop .numTop .dateTop, .categoryThree .twoTop .numTop .dateTop, .categoryOne .threeTop .numTop .dateTop, .categoryTwo .threeTop .numTop .dateTop, .categoryThree .threeTop .numTop .dateTop, .categoryOne .fourTop .numTop .dateTop, .categoryTwo .fourTop .numTop .dateTop, .categoryThree .fourTop .numTop .dateTop, .categoryOne .fiveTop .numTop .dateTop, .categoryTwo .fiveTop .numTop .dateTop, .categoryThree .fiveTop .numTop .dateTop {
+  font-size: 15px;
+}
+/*# sourceMappingURL=styles.css.map */

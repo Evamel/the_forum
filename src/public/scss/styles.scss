@@ -1,0 +1,222 @@
+@import "./header";
+@import "./btn_and_searchbar";
+@import "./right_block";
+@import "./footer";
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F9F9F9;
+    box-sizing: border-box;
+    
+}
+
+.container-fluid{
+    z-index: 2;
+    position: absolute;
+    margin: -77px 20px 0 20px;
+    border-radius: 10px;
+    background-color: white;
+    padding-top: 0px;
+    width: 96%;
+    .path{
+        ul{
+        list-style: none;
+        display: flex;
+        justify-content: left;
+        padding: 20px 0px 0px 0px;
+            a{
+                text-decoration: none;
+                color: #6A6A6A;
+                padding: 5px;
+            }
+        }
+    }
+}
+h2{
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    color: #6A6A6A;
+    padding-left: 30px;
+}
+
+
+//RULES
+.rules{
+    background-color: #ECD5D9;
+    margin-left: 30px;
+    border-left: solid 3px #BE3853;
+    border-radius: 5px;
+    color: #6A6A6A;
+    text-align: left;
+    padding-top: 4px;
+    width: 53rem;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+//MESSAGES BLOCK
+.messages{
+    font-family: 'Rubik', sans-serif;
+    margin-top: 20px;
+    background-color: #F9F9F9;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 66%;
+
+//DETAILS OF ONE MESSAGE
+    .message1{
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-left: 0px;
+        margin-right: initial;
+        margin-top: initial;
+        margin-bottom: 20px;
+        .user{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .avatar{
+            border-radius: 100px;
+            margin-bottom: 2rem;
+            width: 140px;
+            }
+            .pseudo{
+            color: #AB2819;
+            font-weight: bolder;
+            }
+            .level{
+                color: gray;
+            }
+            .numberOfPosts{
+                color: black;
+                font-weight: bold;
+                .num{
+                    color: gray;
+                    font-weight: bold;
+                }
+            }
+        }
+        .detailsMessage{
+            .date{
+                color: gray;
+                font-weight: 600;
+            }
+            .hour{
+                color: gray;
+                font-weight: 600; 
+            }
+            .textMessage{
+                color: black;
+            }
+            .lineMessSign{
+                border-top: solid #D9DCDF 1px;
+            }
+            .signatureMessage{
+                color: black;
+                padding-top: 20px;
+            }
+        }
+        .quote{
+            background-color: #F7F7F7;
+            color: #8F8F8F;
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 12px;
+            border: solid #8F8F8F 1px;
+        }
+    }
+
+//DETAILS OF A SECOND MESSAGE
+    .message2{
+        @extend .message1;
+    }
+}
+
+
+
+
+//BOARD CATEGORIES
+.categories{
+    width: 98%;
+    h2{
+        margin: 30px 0px 20px 0px;
+    }
+}
+.categoryOne{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    background-color: #F9F9F9;
+    padding: 10px;
+    border-radius: 30px;
+    font-size:small;
+.oneTop{
+    width: 32%;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    margin-right: 10px;
+    border: none;
+    .detTop{
+        padding-top: 10px;
+        padding-left: 10px;
+        .imgTop{
+            width: 80px;
+            height: 80px;
+            border-radius:50px;
+        }
+        .titreTop{
+            font-size: medium;
+            font-weight: 400;
+        }
+        .descTop{
+            color: #8F8F8F;
+        }
+    }
+    .lineTop{
+        border-bottom: solid 2px rgb(72, 104, 220);
+        margin: 10px;
+        width: 20%
+    }
+    .numTop{
+        margin-bottom: 10px;
+        padding: 0px 0px 10px 5px;
+        font-size: 18px;
+        color: #8F8F8F;
+        .dateTop{
+            font-size: 15px;
+        }
+    }
+}
+.twoTop{
+    @extend .oneTop;
+}
+.threeTop{
+    @extend .oneTop;
+}
+.fourTop{
+    @extend .oneTop;
+}
+.fiveTop{
+    @extend .oneTop;
+}
+}
+
+.categoryTwo{
+    @extend .categoryOne
+}
+
+.categoryThree{
+    @extend .categoryOne
+}
