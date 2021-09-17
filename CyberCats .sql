@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : mysql
--- Généré le : jeu. 16 sep. 2021 à 17:56
+-- Généré le : ven. 17 sep. 2021 à 07:40
 -- Version du serveur : 10.6.4-MariaDB-1:10.6.4+maria~focal
 -- Version de PHP : 7.4.20
 
@@ -105,6 +105,7 @@ INSERT INTO `topics` (`topic_id`, `topic_subject`, `topic_date`, `board_id`, `us
 
 CREATE TABLE `users` (
   `user_id` int(8) NOT NULL,
+  `user_avatar` varchar(255) NOT NULL,
   `user_name` varchar(30) NOT NULL,
   `user_pass` varchar(255) NOT NULL,
   `user_email` varchar(255) NOT NULL,
@@ -117,13 +118,13 @@ CREATE TABLE `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `user_pass`, `user_email`, `user_signature`, `user_date`, `user_level`) VALUES
-(2, 'Chaton', '$2y$10$NyfsAMD8WZVby23.ShzYIeQEdfaPJVIjYrRoLuk0498YRggUqBrl.', 'sporobross@gmail.com', NULL, '2021-09-09 16:08:20', 1),
-(3, 'Minette', '$2y$10$anM3cEyUVNOAWvggEWC2RuDt9NgiOPKRNgezigiVL0Os1LRobS1My', 'minette@gmail.com', NULL, '2021-09-09 16:44:12', 1),
-(4, 'Minet', '$2y$10$3VjB7wgFau4TZoZsL2cbUus64hwiJXi3KXCD6fvcpDwZwi5FC.8Ti', 'minet@gmail.com', NULL, '2021-09-10 08:20:19', 1),
-(5, 'Pussy', '$2y$10$p4HsfSWDqS8/I7P/UTtWaebPbMIZoirENgsndVebRuX8JIkx/7LU6', 'pussy@gmail.com', NULL, '2021-09-10 09:34:56', 1),
-(6, 'Minou', '$2y$10$/IPzyeWA.xEI.S4XWUr8M.GLTuGQOGnGzz4KvJq5KOw01lPmiudVK', 'minou@gmail.com', 'mew mew mew', '2021-09-10 09:38:34', 1),
-(7, 'Poupouille', '$2y$10$2lXeodCGu35dacrY62R89e8gZsBoQf2s3SJ1w7Dti4rQzlVld27tG', 'poupouille@gmail.com', 'Signé cat\'s eyes', '2021-09-16 17:53:08', 1);
+INSERT INTO `users` (`user_id`, `user_avatar`, `user_name`, `user_pass`, `user_email`, `user_signature`, `user_date`, `user_level`) VALUES
+(2, '', 'Chaton', '$2y$10$NyfsAMD8WZVby23.ShzYIeQEdfaPJVIjYrRoLuk0498YRggUqBrl.', 'sporobross@gmail.com', NULL, '2021-09-09 16:08:20', 1),
+(3, '', 'Minette', '$2y$10$anM3cEyUVNOAWvggEWC2RuDt9NgiOPKRNgezigiVL0Os1LRobS1My', 'minette@gmail.com', NULL, '2021-09-09 16:44:12', 1),
+(4, '', 'Minet', '$2y$10$3VjB7wgFau4TZoZsL2cbUus64hwiJXi3KXCD6fvcpDwZwi5FC.8Ti', 'minet@gmail.com', NULL, '2021-09-10 08:20:19', 1),
+(5, '', 'Pussy', '$2y$10$p4HsfSWDqS8/I7P/UTtWaebPbMIZoirENgsndVebRuX8JIkx/7LU6', 'pussy@gmail.com', NULL, '2021-09-10 09:34:56', 1),
+(6, '', 'Minou', '$2y$10$/IPzyeWA.xEI.S4XWUr8M.GLTuGQOGnGzz4KvJq5KOw01lPmiudVK', 'minou@gmail.com', 'mew mew mew', '2021-09-10 09:38:34', 1),
+(7, '', 'Poupouille', '$2y$10$2lXeodCGu35dacrY62R89e8gZsBoQf2s3SJ1w7Dti4rQzlVld27tG', 'poupouille@gmail.com', 'Signé cat\'s eyes', '2021-09-16 17:53:08', 1);
 
 --
 -- Index pour les tables déchargées
